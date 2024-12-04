@@ -1,0 +1,15 @@
+Using the 3-say_my_name
+This is the '3-say_my_name' module
+The 3-say_my_name has the 'say_my_name' function that prints "My name is <first name> <last name>"
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Bob")
+My name is Bob
+
+>>> say_my_name(12, "White")
+first_name must be a string
+
+>>> say_my_name("White", 12)
+last_name must be a string
