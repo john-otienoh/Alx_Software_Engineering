@@ -1,0 +1,4315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/250 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/cody-widget.js"></script><script async="" src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/pendo.js"></script><script async="" src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":341641,"visitorType":"student","batch":{"id":156,"fullNameWithC":"NBO-1023 (C#21)","schoolLocation":{"id":7,"name":"Nairobi"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+      <!-- Pendo -->
+  <script>
+    (function(apiKey){
+      (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+      v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.eu.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        pendo.initialize({"visitor":{"id":"johnteclaire@gmail.com","email":"johnteclaire@gmail.com","isLearner":true,"isStaff":false,"prgCohortId":156,"prgCohortName":"NBO-1023 (C#21)","id_svna":341641,"curId_svna":1,"curName_svna":"SE Foundations","curCohortId_svna":156,"curCohortName_svna":"NBO-1023 (C#21)","curCohortSchLocName_svna":"Nairobi","curCohortSchLocId_svna":7}});
+    })('3353b3bd-f678-4388-5809-8944627d3f27');
+  </script>
+  <!-- End Pendo -->
+
+
+    <title>Project: 0x08. Python - More Classes and Objects | Nairobi Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/application_alx-cd2824357fd83bf02c4467af44fc37e45b1bcca0798f3adda4b0e7fbf24bd58f.css">
+      <script src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/application-155318ef1e6ece1830f3fcc07f099b7c97969c23088ac3367048c471b5f2bf44.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="YN_eqtvCWUyDc3c4cP_JKJVzUzH9qnMAeJTuS6VbQIjwiYIpXkTRqUe0inj2-ADfKZ3oJeUXWsUR_0qQRxwlUg">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+
+      <!-- React -->
+      <script src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/application-9a15fd1e90588c3c8e15.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/application-87456da7.css">
+
+
+  </head>
+
+  <body class="signed_in env_production notranslate sidebar-collapsed" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <div data-react-class="header/Header" data-react-props="{&quot;ehubHeaderSdkJsUrl&quot;:null,&quot;logoUrl&quot;:&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;,&quot;logoClickUrl&quot;:&quot;/&quot;,&quot;discord&quot;:{&quot;label&quot;:&quot;Discord&quot;,&quot;targetUrl&quot;:&quot;https://discord.com/app&quot;,&quot;linkOpts&quot;:{&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noreferrer&quot;}},&quot;user&quot;:{&quot;myProfileUrl&quot;:&quot;/users/my_profile&quot;,&quot;profilePictureUrl&quot;:&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;},&quot;listItems&quot;:[{&quot;label&quot;:&quot;My Planning&quot;,&quot;iconName&quot;:&quot;calendar&quot;,&quot;targetUrl&quot;:&quot;/planning/me&quot;},{&quot;label&quot;:&quot;Projects&quot;,&quot;iconName&quot;:&quot;code-fork&quot;,&quot;targetUrl&quot;:&quot;/projects/current&quot;,&quot;id&quot;:&quot;sidebar-current-projects-item&quot;},{&quot;label&quot;:&quot;QA Reviews I can make&quot;,&quot;iconName&quot;:&quot;check&quot;,&quot;targetUrl&quot;:&quot;/corrections/to_review&quot;},{&quot;label&quot;:&quot;Evaluation quizzes&quot;,&quot;iconName&quot;:&quot;question&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_current_evaluation_quizzes&quot;},{&quot;label&quot;:&quot;My resources&quot;},{&quot;label&quot;:&quot;Curriculums&quot;,&quot;iconName&quot;:&quot;graduation-cap&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_curriculums&quot;},{&quot;label&quot;:&quot;Concepts&quot;,&quot;iconName&quot;:&quot;file-text&quot;,&quot;targetUrl&quot;:&quot;/concepts&quot;,&quot;id&quot;:&quot;sidebar-concepts-item&quot;},{&quot;label&quot;:&quot;Conference rooms&quot;,&quot;iconName&quot;:&quot;comments&quot;,&quot;targetUrl&quot;:&quot;/dashboards/video_rooms&quot;,&quot;id&quot;:&quot;sidebar-dashboards-video-rooms&quot;},{&quot;label&quot;:&quot;Servers&quot;,&quot;iconName&quot;:&quot;server&quot;,&quot;targetUrl&quot;:&quot;/servers&quot;},{&quot;label&quot;:&quot;Sandboxes&quot;,&quot;iconName&quot;:&quot;terminal&quot;,&quot;targetUrl&quot;:&quot;/user_containers/current&quot;,&quot;id&quot;:&quot;sidebar-dashboards-my-containers&quot;},{&quot;label&quot;:&quot;Tools&quot;,&quot;iconName&quot;:&quot;wrench&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_tools&quot;},{&quot;label&quot;:&quot;Video on demand&quot;,&quot;iconName&quot;:&quot;film&quot;,&quot;targetUrl&quot;:&quot;/dashboards/videos&quot;},{&quot;label&quot;:&quot;My Campus&quot;},{&quot;label&quot;:&quot;Peers&quot;,&quot;iconName&quot;:&quot;users&quot;,&quot;targetUrl&quot;:&quot;/users/peers&quot;}]}" data-react-cache-id="header/Header-0"><div class="header d-flex align-items-center bg-white border-bottom position-fixed top-0 w-full" style="background-color: white; border-color: rgb(229, 230, 230); z-index: 1000;"><div class="header-left align-items-center d-flex position-fixed px-2" style="z-index: 2;"><div class="hamburger mb-0 p-2" style="cursor: pointer; font-size: 24px;"><i class="fa-solid fa-fas fa-bars"></i></div><a class="logo-container bg-white p-1" href="https://intranet.alxswe.com/" target=""><div class="logo mx-auto" style="background-image: url(&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;); background-size: contain; height: 40px; width: 40px;"></div></a></div><div class="header-right d-flex align-items-center flex-grow-1 justify-content-center" style="z-index: 1;"></div></div><div class="sidebar navigation bg-white border-right position-fixed overflow-scroll bottom-0 start-0 " id="sidebar" style="background-color: white; border-color: rgb(238, 238, 238);"><ul class="px-2"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Home"><a href="https://intranet.alxswe.com/" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Home</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">My Planning</div></a></span></li><li class="d-flex align-items-center" id="sidebar-current-projects-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Projects</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">QA Reviews I can make</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Evaluation quizzes</div></a></span></li><hr title="My resources"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Curriculums</div></a></span></li><li class="d-flex align-items-center" id="sidebar-concepts-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Concepts</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-video-rooms"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Conference rooms</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Servers</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-my-containers"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Sandboxes</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Tools"><a href="https://intranet.alxswe.com/dashboards/my_tools" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Tools</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Video on demand</div></a></span></li><hr title="My Campus"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Peers</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Discord"><a href="https://discord.com/app" target="_blank" rel="noreferrer"><div class="icon"><i aria-hidden="true" class="fa-brands fa-discord"></i></div><div class="text-muted flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">Discord</div></a></span></li><li class="d-flex align-items-center bg-white border-top border-right position-fixed p-2 bottom-0 start-0 mb-0" style="background-color: white; border-color: rgb(238, 238, 238);"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile"><a href="https://intranet.alxswe.com/users/my_profile"><div class="image "><div class="inner" style="background-image: url(&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;);"></div></div><div class="text-muted d-none flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">My Profile</div></a></span></li></ul></div></div>
+
+
+    <main class="content" id="content">
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="dropdown d-flex flex-column gap-1">
+    <div aria-haspopup="true" aria-expanded="false" class="align-items-center d-flex gap-3" data-toggle="dropdown" id="student-switch-curriculum-dropdown" role="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-600" style="font-size: 15px !important;">
+          SE Foundations
+        </span>
+        <span class="fs-small text-muted">
+          Average: <span class="fw-500">76.93%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up  fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down  fa-fw"></i>
+        </span>
+      </div>
+    </div>
+
+    <ul aria-labelledby="student-switch-curriculum-dropdown" class="dropdown-menu fs-5">
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/1/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  SE Foundations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">76.93%</span>
+                </span>
+              </div>
+
+                <span class="fw-600 text-info" style="margin-left: 42px">
+                  <i aria-hidden="true" class="fa-solid fa-check "></i>
+                </span>
+            </div>
+</a>        </li>
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/17/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  Short Specializations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">73.33%</span>
+                </span>
+              </div>
+
+            </div>
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-xs-12 col-lg-10 contains-images">
+
+      <h1 class="gap">
+    0x08. Python - More Classes and Objects
+    
+  </h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:19,&quot;value&quot;:&quot;Python&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:27,&quot;value&quot;:&quot;OOP&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">Python</span><span class="label label-primary" style="font-size: 14px;">OOP</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-02-12T06:00:00.000+03:00&quot;,&quot;ends_at&quot;:&quot;2024-02-13T06:00:00.000+03:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-02-15T06:00:00.000+03:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-gear fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-02-12 06:00 (GMT+03:00)"><span class="datetime">Feb 12, 2024 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-02-13 06:00 (GMT+03:00)"><span class="datetime">Feb 13, 2024 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-square-check fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          20.15/106 mandatory
+            &amp;
+            0.0/15 optional
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>19.01%</strong>
+        <ul>
+          <li>Mandatory: 19.01%</li>
+            <li>Optional: 0.0%</li>
+            <li>
+              Calculation:&nbsp;
+                  19.01%
+                    + (19.01% * 0.0%)
+              &nbsp;==&nbsp;<strong>19.01%</strong>
+            </li>
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+    <div id="project_id" style="display: none" data-project-id="250"></div>
+
+
+
+      
+
+      
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/M-MFweENpRdEfRto_Gzlvg" title="Object Oriented Programming" target="_blank">Object Oriented Programming</a> (<em>Read everything until the paragraph “Inheritance” (excluded)</em>)</li>
+<li><a href="https://intranet.alxswe.com/rltoken/_Awd8Gn4SBdq2FRd_bY8KA" title="Object-Oriented Programming" target="_blank">Object-Oriented Programming</a> (<em>Please be careful: in most of the following paragraphs, the author shows the way you should not use or write a class, in order to help you better understand some concepts and how everything works in Python 3. Make sure you read only the following paragraphs: “General Introduction,” “First-class Everything,” “A Minimal Class in Python,” “Attributes,” “Methods,” “The <code>__init__</code> Method,”  “Data Abstraction, Data Encapsulation, and Information Hiding,” “<code>__str__</code>- and <code>__repr__</code>-Methods,” “Public- Protected- and Private Attributes,” &amp; “Destructor”</em>)</li>
+<li><a href="https://intranet.alxswe.com/rltoken/SGQIevRxW6lTgr4jGDzXbw" title="Class and Instance Attributes" target="_blank">Class and Instance Attributes</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/Ij1EnTg02gtIknOkNv4xGA" title="classmethods and staticmethods" target="_blank">classmethods and staticmethods</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/xjpk-jUNe0uGEzcNXbwIHQ" title="Properties vs. Getters and Setters" target="_blank">Properties vs. Getters and Setters</a> (<em>Mainly the last part “Public instead of Private Attributes”</em>)</li>
+<li><a href="https://intranet.alxswe.com/rltoken/iu1ILT-t6FMuZvk7vRvfuQ" title="str vs repr" target="_blank">str vs repr</a> </li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/hOViVT2nJU8jeBxvw52bjw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>Why Python programming is awesome </li>
+<li>What is OOP</li>
+<li>“first-class everything”</li>
+<li>What is a class</li>
+<li>What is an object and an instance</li>
+<li>What is the difference between a class and an object or instance</li>
+<li>What is an attribute</li>
+<li>What are and how to use public, protected and private attributes</li>
+<li>What is <code>self</code></li>
+<li>What is a method</li>
+<li>What is the special <code>__init__</code> method and how to use it</li>
+<li>What is Data Abstraction, Data Encapsulation, and Information Hiding</li>
+<li>What is a property</li>
+<li>What is the difference between an attribute and a property in Python</li>
+<li>What is the Pythonic way to write getters and setters in Python</li>
+<li>What are the special <code>__str__</code> and <code>__repr__</code> methods and how to use them</li>
+<li>What is the difference between <code>__str__</code> and <code>__repr__</code></li>
+<li>What is a class attribute</li>
+<li>What is the difference between a object attribute and a class attribute</li>
+<li>What is a class method</li>
+<li>What is a static method</li>
+<li>How to dynamically create arbitrary new attributes for existing instances of a class</li>
+<li>How to bind attributes to object and classes</li>
+<li>What is and what does contain <code>__dict__</code> of a class and of an instance of a class</li>
+<li>How does Python find the attributes of an object or class</li>
+<li>How to use the <code>getattr</code> function</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)</li>
+<li>All your files should end with a new line</li>
+<li>The first line of all your files should be exactly <code>#!/usr/bin/python3</code></li>
+<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+<li>Your code should use the pycodestyle (version <code>2.8.*</code>)</li>
+<li>All your files must be executable</li>
+<li>The length of your files will be tested using <code>wc</code></li>
+</ul>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Show quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: none;">
+          <div class="quiz_question_item_container" data-role="quiz_question314" data-position="2">
+            <div class=" clearfix" id="quiz_question-314">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is <code>__str__</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="314">
+                <li class="">
+
+  <input type="radio" name="314" id="314-1503353440684" value="1503353440684" data-quiz-answer-id="1503353440684" data-quiz-question-id="314" disabled="disabled" checked="checked">
+  <label for="314-1503353440684"><p>Instance method that returns an “informal” and nicely printable string representation of an instance</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="314" id="314-1503353525006" value="1503353525006" data-quiz-answer-id="1503353525006" data-quiz-question-id="314" disabled="disabled">
+  <label for="314-1503353525006"><p>Instance method that returns the dictionary representation of an instance</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="314" id="314-1503353671731" value="1503353671731" data-quiz-answer-id="1503353671731" data-quiz-question-id="314" disabled="disabled">
+  <label for="314-1503353671731"><p>Instance method that prints an “informal” and nicely printable string representation of an instance</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question317" data-position="5">
+            <div class=" clearfix" id="quiz_question-317">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is <code>__doc__</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="317">
+                <li class="">
+
+  <input type="radio" name="317" id="317-1503353871912" value="1503353871912" data-quiz-answer-id="1503353871912" data-quiz-question-id="317" disabled="disabled" checked="checked">
+  <label for="317-1503353871912"><p>The string documentation of an object (based on docstring)</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="317" id="317-1503353919073" value="1503353919073" data-quiz-answer-id="1503353919073" data-quiz-question-id="317" disabled="disabled">
+  <label for="317-1503353919073"><p>Prints the documentation of an object</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="317" id="317-1503353941649" value="1503353941649" data-quiz-answer-id="1503353941649" data-quiz-question-id="317" disabled="disabled">
+  <label for="317-1503353941649"><p>Creates man file</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question318" data-position="6">
+            <div class=" clearfix" id="quiz_question-318">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+print(User.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="318">
+                <li class="">
+
+  <input type="radio" name="318" id="318-1503354027120" value="1503354027120" data-quiz-answer-id="1503354027120" data-quiz-question-id="318" disabled="disabled">
+  <label for="318-1503354027120"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="318" id="318-1503354013815" value="1503354013815" data-quiz-answer-id="1503354013815" data-quiz-question-id="318" disabled="disabled">
+  <label for="318-1503354013815"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="318" id="318-1503354021125" value="1503354021125" data-quiz-answer-id="1503354021125" data-quiz-question-id="318" disabled="disabled" checked="checked">
+  <label for="318-1503354021125"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="318" id="318-1503354024444" value="1503354024444" data-quiz-answer-id="1503354024444" data-quiz-question-id="318" disabled="disabled">
+  <label for="318-1503354024444"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question326" data-position="14">
+            <div class=" clearfix" id="quiz_question-326">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+u = User()
+u.id = 89
+User.id = 98
+print(u.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="326">
+                <li class="">
+
+  <input type="radio" name="326" id="326-1503354168597" value="1503354168597" data-quiz-answer-id="1503354168597" data-quiz-question-id="326" disabled="disabled">
+  <label for="326-1503354168597"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="326" id="326-1503354156998" value="1503354156998" data-quiz-answer-id="1503354156998" data-quiz-question-id="326" disabled="disabled">
+  <label for="326-1503354156998"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="326" id="326-1503354164223" value="1503354164223" data-quiz-answer-id="1503354164223" data-quiz-question-id="326" disabled="disabled">
+  <label for="326-1503354164223"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="326" id="326-1503354166445" value="1503354166445" data-quiz-answer-id="1503354166445" data-quiz-question-id="326" disabled="disabled" checked="checked">
+  <label for="326-1503354166445"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question325" data-position="13">
+            <div class=" clearfix" id="quiz_question-325">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+u = User()
+u.id = 89
+User.id = 98
+print(User.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="325">
+                <li class="">
+
+  <input type="radio" name="325" id="325-1503354147812" value="1503354147812" data-quiz-answer-id="1503354147812" data-quiz-question-id="325" disabled="disabled" checked="checked">
+  <label for="325-1503354147812"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="325" id="325-1503354138040" value="1503354138040" data-quiz-answer-id="1503354138040" data-quiz-question-id="325" disabled="disabled">
+  <label for="325-1503354138040"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="325" id="325-1503354140348" value="1503354140348" data-quiz-answer-id="1503354140348" data-quiz-question-id="325" disabled="disabled">
+  <label for="325-1503354140348"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="325" id="325-1503354144529" value="1503354144529" data-quiz-answer-id="1503354144529" data-quiz-question-id="325" disabled="disabled">
+  <label for="325-1503354144529"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question322" data-position="10">
+            <div class=" clearfix" id="quiz_question-322">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+u = User()
+User.id = 98
+print(u.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="322">
+                <li class="">
+
+  <input type="radio" name="322" id="322-1503354096616" value="1503354096616" data-quiz-answer-id="1503354096616" data-quiz-question-id="322" disabled="disabled" checked="checked">
+  <label for="322-1503354096616"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="322" id="322-1503354088997" value="1503354088997" data-quiz-answer-id="1503354088997" data-quiz-question-id="322" disabled="disabled">
+  <label for="322-1503354088997"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="322" id="322-1503354093046" value="1503354093046" data-quiz-answer-id="1503354093046" data-quiz-question-id="322" disabled="disabled">
+  <label for="322-1503354093046"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="322" id="322-1503354094565" value="1503354094565" data-quiz-answer-id="1503354094565" data-quiz-question-id="322" disabled="disabled">
+  <label for="322-1503354094565"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question321" data-position="9">
+            <div class=" clearfix" id="quiz_question-321">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+User.id = 98
+u = User()
+print(u.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="321">
+                <li class="">
+
+  <input type="radio" name="321" id="321-1503354083153" value="1503354083153" data-quiz-answer-id="1503354083153" data-quiz-question-id="321" disabled="disabled" checked="checked">
+  <label for="321-1503354083153"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="321" id="321-1503354068209" value="1503354068209" data-quiz-answer-id="1503354068209" data-quiz-question-id="321" disabled="disabled">
+  <label for="321-1503354068209"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="321" id="321-1503354072736" value="1503354072736" data-quiz-answer-id="1503354072736" data-quiz-question-id="321" disabled="disabled">
+  <label for="321-1503354072736"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="321" id="321-1503354079925" value="1503354079925" data-quiz-answer-id="1503354079925" data-quiz-question-id="321" disabled="disabled">
+  <label for="321-1503354079925"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question324" data-position="12">
+            <div class=" clearfix" id="quiz_question-324">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+User.id = 98
+u = User()
+u.id = 89
+print(User.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="324">
+                <li class="">
+
+  <input type="radio" name="324" id="324-1503354133078" value="1503354133078" data-quiz-answer-id="1503354133078" data-quiz-question-id="324" disabled="disabled" checked="checked">
+  <label for="324-1503354133078"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="324" id="324-1503354123277" value="1503354123277" data-quiz-answer-id="1503354123277" data-quiz-question-id="324" disabled="disabled">
+  <label for="324-1503354123277"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="324" id="324-1503354126738" value="1503354126738" data-quiz-answer-id="1503354126738" data-quiz-question-id="324" disabled="disabled">
+  <label for="324-1503354126738"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="324" id="324-1503354128655" value="1503354128655" data-quiz-answer-id="1503354128655" data-quiz-question-id="324" disabled="disabled">
+  <label for="324-1503354128655"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question323" data-position="11">
+            <div class=" clearfix" id="quiz_question-323">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+User.id = 98
+u = User()
+u.id = 89
+print(u.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="323">
+                <li class="">
+
+  <input type="radio" name="323" id="323-1503354116068" value="1503354116068" data-quiz-answer-id="1503354116068" data-quiz-question-id="323" disabled="disabled">
+  <label for="323-1503354116068"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="323" id="323-1503354104517" value="1503354104517" data-quiz-answer-id="1503354104517" data-quiz-question-id="323" disabled="disabled">
+  <label for="323-1503354104517"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="323" id="323-1503354108918" value="1503354108918" data-quiz-answer-id="1503354108918" data-quiz-question-id="323" disabled="disabled">
+  <label for="323-1503354108918"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="323" id="323-1503354112049" value="1503354112049" data-quiz-answer-id="1503354112049" data-quiz-question-id="323" disabled="disabled" checked="checked">
+  <label for="323-1503354112049"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question319" data-position="7">
+            <div class=" clearfix" id="quiz_question-319">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+u = User()
+print(u.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="319">
+                <li class="">
+
+  <input type="radio" name="319" id="319-1503354041780" value="1503354041780" data-quiz-answer-id="1503354041780" data-quiz-question-id="319" disabled="disabled">
+  <label for="319-1503354041780"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="319" id="319-1503354033607" value="1503354033607" data-quiz-answer-id="1503354033607" data-quiz-question-id="319" disabled="disabled">
+  <label for="319-1503354033607"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="319" id="319-1503354036096" value="1503354036096" data-quiz-answer-id="1503354036096" data-quiz-question-id="319" disabled="disabled" checked="checked">
+  <label for="319-1503354036096"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="319" id="319-1503354039434" value="1503354039434" data-quiz-answer-id="1503354039434" data-quiz-question-id="319" disabled="disabled">
+  <label for="319-1503354039434"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question315" data-position="3">
+            <div class=" clearfix" id="quiz_question-315">
+
+    <h4 class="quiz_question">
+        
+        Question #10
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is <code>__repr__</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="315">
+                <li class="">
+
+  <input type="radio" name="315" id="315-1503353685678" value="1503353685678" data-quiz-answer-id="1503353685678" data-quiz-question-id="315" disabled="disabled">
+  <label for="315-1503353685678"><p>Instance method that prints an “official” string representation of an instance</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="315" id="315-1503353723885" value="1503353723885" data-quiz-answer-id="1503353723885" data-quiz-question-id="315" disabled="disabled" checked="checked">
+  <label for="315-1503353723885"><p>Instance method that returns an “official” string representation of an instance</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="315" id="315-1503353735180" value="1503353735180" data-quiz-answer-id="1503353735180" data-quiz-question-id="315" disabled="disabled">
+  <label for="315-1503353735180"><p>Instance method that returns the dictionary representation of an instance</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question316" data-position="4">
+            <div class=" clearfix" id="quiz_question-316">
+
+    <h4 class="quiz_question">
+        
+        Question #11
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is <code>__del__</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="316">
+                <li class="">
+
+  <input type="radio" name="316" id="316-1503353739108" value="1503353739108" data-quiz-answer-id="1503353739108" data-quiz-question-id="316" disabled="disabled">
+  <label for="316-1503353739108"><p>Instance method that removes the last character of an instance</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="316" id="316-1503353808959" value="1503353808959" data-quiz-answer-id="1503353808959" data-quiz-question-id="316" disabled="disabled">
+  <label for="316-1503353808959"><p>Instance method that prints the memory address of an instance</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="316" id="316-1503353853010" value="1503353853010" data-quiz-answer-id="1503353853010" data-quiz-question-id="316" disabled="disabled" checked="checked">
+  <label for="316-1503353853010"><p>Instance method called when an instance is deleted</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question320" data-position="8">
+            <div class=" clearfix" id="quiz_question-320">
+
+    <h4 class="quiz_question">
+        
+        Question #12
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What do these lines print?</p>
+
+<pre><code>class User:
+    id = 1
+
+u = User()
+u.id = 89
+print(u.id)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="320">
+                <li class="">
+
+  <input type="radio" name="320" id="320-1503354058616" value="1503354058616" data-quiz-answer-id="1503354058616" data-quiz-question-id="320" disabled="disabled">
+  <label for="320-1503354058616"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="320" id="320-1503354046956" value="1503354046956" data-quiz-answer-id="1503354046956" data-quiz-question-id="320" disabled="disabled">
+  <label for="320-1503354046956"><p>None</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="320" id="320-1503354051106" value="1503354051106" data-quiz-answer-id="1503354051106" data-quiz-question-id="320" disabled="disabled">
+  <label for="320-1503354051106"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="320" id="320-1503354052978" value="1503354052978" data-quiz-answer-id="1503354052978" data-quiz-question-id="320" disabled="disabled" checked="checked">
+  <label for="320-1503354052978"><p>89</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question313" data-position="1">
+            <div class=" clearfix" id="quiz_question-313">
+
+    <h4 class="quiz_question">
+        
+        Question #13
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is <code>__init__</code>? </p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="313">
+                <li class="">
+
+  <input type="radio" name="313" id="313-1503353325301" value="1503353325301" data-quiz-answer-id="1503353325301" data-quiz-question-id="313" disabled="disabled">
+  <label for="313-1503353325301"><p>The instance method called when a class is called for the first time</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="313" id="313-1503353243225" value="1503353243225" data-quiz-answer-id="1503353243225" data-quiz-question-id="313" disabled="disabled">
+  <label for="313-1503353243225"><p>A class attribute</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="313" id="313-1503353289241" value="1503353289241" data-quiz-answer-id="1503353289241" data-quiz-question-id="313" disabled="disabled">
+  <label for="313-1503353289241"><p>A class method</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="313" id="313-1503353295816" value="1503353295816" data-quiz-answer-id="1503353295816" data-quiz-question-id="313" disabled="disabled" checked="checked">
+  <label for="313-1503353295816"><p>The instance method called when a new object is created </p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+      </section>
+    </div>
+  </div>
+
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task1210" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-1210">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Simple rectangle
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1210" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 65.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write an empty class <code>Rectangle</code> that defines a rectangle:</p>
+
+<ul>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 0-main.py
+#!/usr/bin/python3
+Rectangle = __import__('0-rectangle').Rectangle
+
+my_rectangle = Rectangle()
+print(type(my_rectangle))
+print(my_rectangle.__dict__)
+
+guillaume@ubuntu:~/0x08$ ./0-main.py
+&lt;class '0-rectangle.Rectangle'&gt;
+{}
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>0-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1210-modal-button" data-task-id="1210" data-toggle="modal" data-target="#task-test-correction-1210-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1210}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1210-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Simple rectangle"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1210">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1210">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1210">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1210}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1210" data-toggle="modal" data-target="#task-qa-review-1210-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1210}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1210-modal" data-correction-id="22334388" data-task-id="1210">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Simple rectangle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1211" data-position="2" id="task-num-1">
+      <div class="panel panel-default task-card " id="task-1211">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      1. Real definition of a rectangle
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1211" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 81.25%">
+          <div class="task_score_bar" style="width: 65.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">52.81%</span> (<span class="task_progress_value">Checks completed: 81.25%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>0-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 1-main.py
+#!/usr/bin/python3
+Rectangle = __import__('1-rectangle').Rectangle
+
+my_rectangle = Rectangle(2, 4)
+print(my_rectangle.__dict__)
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle.__dict__)
+
+guillaume@ubuntu:~/0x08$ ./1-main.py
+{'_Rectangle__height': 4, '_Rectangle__width': 2}
+{'_Rectangle__height': 3, '_Rectangle__width': 10}
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>1-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1211-modal-button" data-task-id="1211" data-toggle="modal" data-target="#task-test-correction-1211-correction-modal" id="task-num-1-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1211}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1211-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "1. Real definition of a rectangle"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1211">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1211">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1211">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1211" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1211}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1211" data-toggle="modal" data-target="#task-qa-review-1211-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1211}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1211-modal" data-correction-id="22334388" data-task-id="1211">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">1. Real definition of a rectangle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1212" data-position="3" id="task-num-2">
+      <div class="panel panel-default task-card " id="task-1212">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. Area and Perimeter
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1212" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 80.0%">
+          <div class="task_score_bar" style="width: 65.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">52.0%</span> (<span class="task_progress_value">Checks completed: 80.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>1-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter is equal to <code>0</code></li>
+</ul></li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 2-main.py
+#!/usr/bin/python3
+Rectangle = __import__('2-rectangle').Rectangle
+
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+print("--")
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+guillaume@ubuntu:~/0x08$ ./2-main.py
+Area: 8 - Perimeter: 12
+--
+Area: 30 - Perimeter: 26
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>2-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1212-modal-button" data-task-id="1212" data-toggle="modal" data-target="#task-test-correction-1212-correction-modal" id="task-num-2-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1212}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1212-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "2. Area and Perimeter"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1212">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1212">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1212">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1212" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1212}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1212" data-toggle="modal" data-target="#task-qa-review-1212-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1212}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1212-modal" data-correction-id="22334388" data-task-id="1212">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">2. Area and Perimeter</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1213" data-position="4" id="task-num-3">
+      <div class="panel panel-default task-card " id="task-1213">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. String representation
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1213" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 36.36%">
+          <div class="task_score_bar" style="width: 65.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">23.64%</span> (<span class="task_progress_value">Checks completed: 36.36%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>2-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: (see example below)
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 3-main.py
+#!/usr/bin/python3
+Rectangle = __import__('3-rectangle').Rectangle
+
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+print(str(my_rectangle))
+print(repr(my_rectangle))
+
+print("--")
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle)
+print(repr(my_rectangle))
+
+guillaume@ubuntu:~/0x08$ ./3-main.py
+Area: 8 - Perimeter: 12
+##
+##
+##
+##
+&lt;3-rectangle.Rectangle object at 0x7f92a75a2eb8&gt;
+--
+##########
+##########
+##########
+&lt;3-rectangle.Rectangle object at 0x7f92a75a2eb8&gt;
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>Object address can be different</strong></p>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>3-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1213-modal-button" data-task-id="1213" data-toggle="modal" data-target="#task-test-correction-1213-correction-modal" id="task-num-3-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1213}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1213-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "3. String representation"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1213">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1213">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1213">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1213" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1213}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1213" data-toggle="modal" data-target="#task-qa-review-1213-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1213}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1213-modal" data-correction-id="22334388" data-task-id="1213">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">3. String representation</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1214" data-position="5" id="task-num-4">
+      <div class="panel panel-default task-card " id="task-1214">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      4. Eval is magic
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1214" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>3-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: (see example below)
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li><code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> (see example below)</li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 4-main.py
+#!/usr/bin/python3
+Rectangle = __import__('4-rectangle').Rectangle
+
+my_rectangle = Rectangle(2, 4)
+print(str(my_rectangle))
+print("--")
+print(my_rectangle)
+print("--")
+print(repr(my_rectangle))
+print("--")
+print(hex(id(my_rectangle)))
+print("--")
+
+# create new instance based on representation
+new_rectangle = eval(repr(my_rectangle))
+print(str(new_rectangle))
+print("--")
+print(new_rectangle)
+print("--")
+print(repr(new_rectangle))
+print("--")
+print(hex(id(new_rectangle)))
+print("--")
+
+print(new_rectangle is my_rectangle)
+print(type(new_rectangle) is type(my_rectangle))
+
+guillaume@ubuntu:~/0x08$ ./4-main.py
+##
+##
+##
+##
+--
+##
+##
+##
+##
+--
+Rectangle(2, 4)
+--
+0x7f09ebf7cc88
+--
+##
+##
+##
+##
+--
+##
+##
+##
+##
+--
+Rectangle(2, 4)
+--
+0x7f09ebf7ccc0
+--
+False
+True
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>4-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1214-modal-button" data-task-id="1214" data-toggle="modal" data-target="#task-test-correction-1214-correction-modal" id="task-num-4-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1214}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1214-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "4. Eval is magic"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1214">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1214">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1214">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1214" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1214}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1214" data-toggle="modal" data-target="#task-qa-review-1214-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1214}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1214-modal" data-correction-id="22334388" data-task-id="1214">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">4. Eval is magic</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1215" data-position="6" id="task-num-5">
+      <div class="panel panel-default task-card " id="task-1215">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      5. Detect instance deletion
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1215" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>4-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: 
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li><code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> </li>
+<li>Print the message <code>Bye rectangle...</code> (<code>...</code> being 3 dots not ellipsis) when an instance of <code>Rectangle</code> is deleted</li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 5-main.py
+#!/usr/bin/python3
+Rectangle = __import__('5-rectangle').Rectangle
+
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+del my_rectangle
+
+try:
+    print(my_rectangle)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+guillaume@ubuntu:~/0x08$ ./5-main.py
+Area: 8 - Perimeter: 12
+Bye rectangle...
+[NameError] name 'my_rectangle' is not defined
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>5-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1215-modal-button" data-task-id="1215" data-toggle="modal" data-target="#task-test-correction-1215-correction-modal" id="task-num-5-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1215}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1215-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "5. Detect instance deletion"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1215">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1215">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1215">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1215" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1215}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1215" data-toggle="modal" data-target="#task-qa-review-1215-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1215}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1215-modal" data-correction-id="22334388" data-task-id="1215">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">5. Detect instance deletion</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1216" data-position="7" id="task-num-6">
+      <div class="panel panel-default task-card " id="task-1216">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      6. How many instances
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1216" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>5-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Public class attribute <code>number_of_instances</code>:
+
+<ul>
+<li>Initialized to <code>0</code></li>
+<li>Incremented during each new instance instantiation</li>
+<li>Decremented during each instance deletion</li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: 
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li><code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> </li>
+<li>Print the message <code>Bye rectangle...</code> (<code>...</code> being 3 dots not ellipsis) when an instance of <code>Rectangle</code> is deleted</li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 6-main.py
+#!/usr/bin/python3
+Rectangle = __import__('6-rectangle').Rectangle
+
+my_rectangle_1 = Rectangle(2, 4)
+my_rectangle_2 = Rectangle(2, 4)
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_1
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_2
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+
+guillaume@ubuntu:~/0x08$ ./6-main.py
+2 instances of Rectangle
+Bye rectangle...
+1 instances of Rectangle
+Bye rectangle...
+0 instances of Rectangle
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>6-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1216-modal-button" data-task-id="1216" data-toggle="modal" data-target="#task-test-correction-1216-correction-modal" id="task-num-6-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1216}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1216-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "6. How many instances"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1216">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1216">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1216">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1216" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1216}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1216" data-toggle="modal" data-target="#task-qa-review-1216-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1216}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1216-modal" data-correction-id="22334388" data-task-id="1216">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">6. How many instances</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1217" data-position="8" id="task-num-7">
+      <div class="panel panel-default task-card " id="task-1217">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      7. Change representation
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1217" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>6-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Public class attribute <code>number_of_instances</code>:
+
+<ul>
+<li>Initialized to <code>0</code></li>
+<li>Incremented during each new instance instantiation</li>
+<li>Decremented during each instance deletion</li>
+</ul></li>
+<li>Public class attribute <code>print_symbol</code>:
+
+<ul>
+<li>Initialized to <code>#</code></li>
+<li>Used as symbol for string representation</li>
+<li>Can be any type</li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character(s) stored in  <code>print_symbol</code>: 
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li><code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> </li>
+<li>Print the message <code>Bye rectangle...</code> (<code>...</code> being 3 dots not ellipsis) when an instance of <code>Rectangle</code> is deleted</li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 7-main.py
+#!/usr/bin/python3
+Rectangle = __import__('7-rectangle').Rectangle
+
+my_rectangle_1 = Rectangle(8, 4)
+print(my_rectangle_1)
+print("--")
+my_rectangle_1.print_symbol = "&amp;"
+print(my_rectangle_1)
+print("--")
+
+my_rectangle_2 = Rectangle(2, 1)
+print(my_rectangle_2)
+print("--")
+Rectangle.print_symbol = "C"
+print(my_rectangle_2)
+print("--")
+
+my_rectangle_3 = Rectangle(7, 3)
+print(my_rectangle_3)
+
+print("--")
+
+my_rectangle_3.print_symbol = ["C", "is", "fun!"]
+print(my_rectangle_3)
+
+print("--")
+
+guillaume@ubuntu:~/0x08$ ./7-main.py
+########
+########
+########
+########
+--
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+--
+##
+--
+CC
+--
+CCCCCCC
+CCCCCCC
+CCCCCCC
+--
+['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']
+['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']
+['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']
+--
+Bye rectangle...
+Bye rectangle...
+Bye rectangle...
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>7-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1217-modal-button" data-task-id="1217" data-toggle="modal" data-target="#task-test-correction-1217-correction-modal" id="task-num-7-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1217}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1217-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "7. Change representation"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1217">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1217">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1217">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1217" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1217}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1217" data-toggle="modal" data-target="#task-qa-review-1217-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1217}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1217-modal" data-correction-id="22334388" data-task-id="1217">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">7. Change representation</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1218" data-position="9" id="task-num-8">
+      <div class="panel panel-default task-card " id="task-1218">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      8. Compare rectangles
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1218" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>7-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Public class attribute <code>number_of_instances</code>:
+
+<ul>
+<li>Initialized to <code>0</code></li>
+<li>Incremented during each new instance instantiation</li>
+<li>Decremented during each instance deletion</li>
+</ul></li>
+<li>Public class attribute <code>print_symbol</code>:
+
+<ul>
+<li>Initialized to <code>#</code></li>
+<li>Used as symbol for string representation</li>
+<li>Can be any type</li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: 
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li><code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> </li>
+<li>Print the message <code>Bye rectangle...</code> (<code>...</code> being 3 dots not ellipsis) when an instance of <code>Rectangle</code> is deleted</li>
+<li>Static method <code>def bigger_or_equal(rect_1, rect_2):</code> that returns the biggest rectangle based on the area
+
+<ul>
+<li><code>rect_1</code> must be an instance of <code>Rectangle</code>, otherwise raise a <code>TypeError</code> exception with the message <code>rect_1 must be an instance of Rectangle</code><br></li>
+<li><code>rect_2</code> must be an instance of <code>Rectangle</code>, otherwise raise a <code>TypeError</code> exception with the message <code>rect_2 must be an instance of Rectangle</code><br></li>
+<li>Returns <code>rect_1</code> if both have the same area value</li>
+</ul></li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 8-main.py
+#!/usr/bin/python3
+Rectangle = __import__('8-rectangle').Rectangle
+
+my_rectangle_1 = Rectangle(8, 4)
+my_rectangle_2 = Rectangle(2, 3)
+
+if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
+    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
+else:
+    print("my_rectangle_2 is bigger than my_rectangle_1")
+
+
+my_rectangle_2.width = 10
+my_rectangle_2.height = 5
+if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
+    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
+else:
+    print("my_rectangle_2 is bigger than my_rectangle_1")
+
+guillaume@ubuntu:~/0x08$ ./8-main.py
+my_rectangle_1 is bigger or equal to my_rectangle_2
+my_rectangle_2 is bigger than my_rectangle_1
+Bye rectangle...
+Bye rectangle...
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>8-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1218-modal-button" data-task-id="1218" data-toggle="modal" data-target="#task-test-correction-1218-correction-modal" id="task-num-8-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1218}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1218-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "8. Compare rectangles"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1218">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1218">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1218">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1218" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1218}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1218" data-toggle="modal" data-target="#task-qa-review-1218-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1218}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1218-modal" data-correction-id="22334388" data-task-id="1218">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">8. Compare rectangles</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1219" data-position="10" id="task-num-9">
+      <div class="panel panel-default task-card " id="task-1219">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      9. A square is a rectangle
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1219" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a class <code>Rectangle</code> that defines a rectangle by: (based on <code>8-rectangle.py</code>)</p>
+
+<ul>
+<li>Private instance attribute: <code>width</code>:
+
+<ul>
+<li>property <code>def width(self):</code> to retrieve it</li>
+<li>property setter <code>def width(self, value):</code> to set it:
+
+<ul>
+<li><code>width</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>width must be an integer</code><br></li>
+<li>if <code>width</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>width must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Private instance attribute: <code>height</code>:
+
+<ul>
+<li>property <code>def height(self):</code> to retrieve it</li>
+<li>property setter <code>def height(self, value):</code> to set it:
+
+<ul>
+<li><code>height</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>height must be an integer</code><br></li>
+<li>if <code>height</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>height must be &gt;= 0</code></li>
+</ul></li>
+</ul></li>
+<li>Public class attribute <code>number_of_instances</code>:
+
+<ul>
+<li>Initialized to <code>0</code></li>
+<li>Incremented during each new instance instantiation</li>
+<li>Decremented during each instance deletion</li>
+</ul></li>
+<li>Public class attribute <code>print_symbol</code>:
+
+<ul>
+<li>Initialized to <code>#</code></li>
+<li>Used as symbol for string representation</li>
+<li>Can be any type</li>
+</ul></li>
+<li>Instantiation with optional <code>width</code> and <code>height</code>: <code>def __init__(self, width=0, height=0):</code></li>
+<li>Public instance method: <code>def area(self):</code> that returns the rectangle area</li>
+<li>Public instance method: <code>def perimeter(self):</code> that returns the rectangle perimeter:
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to <code>0</code>, perimeter has to be equal to <code>0</code></li>
+</ul></li>
+<li><code>print()</code> and <code>str()</code> should print the rectangle with the character <code>#</code>: 
+
+<ul>
+<li>if <code>width</code> or <code>height</code> is equal to 0, return an empty string</li>
+</ul></li>
+<li><code>repr()</code> should return a string representation of the rectangle to be able to recreate a new instance by using <code>eval()</code> </li>
+<li>Print the message <code>Bye rectangle...</code> (<code>...</code> being 3 dots not ellipsis) when an instance of <code>Rectangle</code> is deleted</li>
+<li>Static method <code>def bigger_or_equal(rect_1, rect_2):</code> that returns the biggest rectangle based on the area
+
+<ul>
+<li><code>rect_1</code> must be an instance of <code>Rectangle</code>, otherwise raise a <code>TypeError</code> exception with the message <code>rect_1 must be an instance of Rectangle</code><br></li>
+<li><code>rect_2</code> must be an instance of <code>Rectangle</code>, otherwise raise a <code>TypeError</code> exception with the message <code>rect_2 must be an instance of Rectangle</code><br></li>
+<li>Returns <code>rect_1</code> if both have the same area value</li>
+</ul></li>
+<li>Class method <code>def square(cls, size=0):</code> that returns a new Rectangle instance with <code>width == height == size</code></li>
+<li>You are not allowed to import any module</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/0x08$ cat 9-main.py
+#!/usr/bin/python3
+Rectangle = __import__('9-rectangle').Rectangle
+
+my_square = Rectangle.square(5)
+print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
+print(my_square)
+
+guillaume@ubuntu:~/0x08$ ./9-main.py
+Area: 25 - Perimeter: 20
+#####
+#####
+#####
+#####
+#####
+Bye rectangle...
+guillaume@ubuntu:~/0x08$ 
+</code></pre>
+
+<p><strong>No test cases needed</strong></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>9-rectangle.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1219-modal-button" data-task-id="1219" data-toggle="modal" data-target="#task-test-correction-1219-correction-modal" id="task-num-9-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1219}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1219-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "9. A square is a rectangle"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1219">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1219">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1219">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1219" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1219}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1219" data-toggle="modal" data-target="#task-qa-review-1219-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1219}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1219-modal" data-correction-id="22334388" data-task-id="1219">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">9. A square is a rectangle</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1209" data-position="101" id="task-num-10">
+      <div class="panel panel-default task-card " id="task-1209">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      10. N queens
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          #advanced
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1209" data-correction-id="22334388">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p><img src="./Project_ 0x08. Python - More Classes and Objects _ Nairobi Intranet_files/Judit-photo1_602x433.jpg"><br>
+<small>Chess grandmaster <a href="https://intranet.alxswe.com/rltoken/bsRwbt64OvYjWaClriv0jg" title="Judit Polgár" target="_blank">Judit Polgár</a>, the strongest female chess player of all time</small><br>
+<br></p>
+
+<p>The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard.
+Write a program that solves the N queens problem.</p>
+
+<ul>
+<li>Usage: <code>nqueens N</code>
+
+<ul>
+<li>If the user called the program with the wrong number of arguments, print <code>Usage: nqueens N</code>, followed by a new line, and exit with the status <code>1</code></li>
+</ul></li>
+<li>where N must be an integer greater or equal to <code>4</code>
+
+<ul>
+<li>If N is not an integer, print <code>N must be a number</code>, followed by a new line, and exit with the status <code>1</code></li>
+<li>If N is smaller than <code>4</code>, print <code>N must be at least 4</code>, followed by a new line, and exit with the status <code>1</code> </li>
+</ul></li>
+<li>The program should print every possible solution to the problem
+
+<ul>
+<li>One solution per line</li>
+<li>Format: see example</li>
+<li>You don’t have to print the solutions in a specific order</li>
+</ul></li>
+<li>You are only allowed to import the <code>sys</code> module</li>
+</ul>
+
+<p>Read: <a href="https://intranet.alxswe.com/rltoken/dAQmi8RxMnLH-iHBzkz-lw" title="Queen" target="_blank">Queen</a>, <a href="https://intranet.alxswe.com/rltoken/TGXZXdY2Awg8m4mSjlrjjA" title="Backtracking" target="_blank">Backtracking</a></p>
+
+<pre><code>julien@ubuntu:~/0x08. N Queens$ ./101-nqueens.py 4
+[[0, 1], [1, 3], [2, 0], [3, 2]]
+[[0, 2], [1, 0], [2, 3], [3, 1]]
+julien@ubuntu:~/0x08. N Queens$ ./101-nqueens.py 6
+[[0, 1], [1, 3], [2, 5], [3, 0], [4, 2], [5, 4]]
+[[0, 2], [1, 5], [2, 1], [3, 4], [4, 0], [5, 3]]
+[[0, 3], [1, 0], [2, 4], [3, 1], [4, 5], [5, 2]]
+[[0, 4], [1, 2], [2, 0], [3, 5], [4, 3], [5, 1]]
+julien@ubuntu:~/0x08. N Queens$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-higher_level_programming</code></li>
+            <li>Directory: <code>0x08-python-more_classes</code></li>
+            <li>File: <code>101-nqueens.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1209-modal-button" data-task-id="1209" data-toggle="modal" data-target="#task-test-correction-1209-correction-modal" id="task-num-10-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1209}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1209-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "10. N queens"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1209">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1209">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1209">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1209" data-correction-id="22334388">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1209}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1209" data-toggle="modal" data-target="#task-qa-review-1209-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1209}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1209-modal" data-correction-id="22334388" data-task-id="1209">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">10. N queens</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+
+          <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended Sandbox</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;available&quot;:true,&quot;description&quot;:&quot;\u003cp\u003eBasic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations\u003c/p\u003e\n&quot;,&quot;id&quot;:39,&quot;name&quot;:&quot;Ubuntu 20.04&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:2,&quot;csrfToken&quot;:&quot;aLjDNNDjNxEkxnGtgEOYy9z6EZi553rQmCikNdiHRr347p-3VWW_9OABjO0GRFE8YBSqjKFaUxXxQwDuOsAjZw&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary"><i aria-hidden="true" class="fa-solid fa-filter"></i><span class="ml-2">Running only</span></a><div class="align-items-center d-flex" style="position: relative; width: 100%;"><input class="form-control" placeholder="Search for an image ..." type="search" value=""></div></div><div class="mt-3"><h3>1 image<small class="ml-2">(0/2 Sandboxes spawned)</small></h3></div><div class="mt-3"><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa-solid fa-terminal text-danger"></i><span class="ml-2">Ubuntu 20.04</span></h3><div class="mt-2 text-muted"><p>Basic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations</p>
+</div></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa-solid fa-play"></i><span class="ml-2">Run</span></a></div></div></div></div></div></div></div></div></div></div></div>
+
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+      </article>
+
+        <div class="copyright">Copyright © 2024 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary atop-help" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa-solid fa-magnifying-glass "></i>
+  <i aria-hidden="true" class="fa-solid fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" autocomplete="off" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+        <script id="cody-snippet">
+          window.codySettings = { widget_id: "9993bc72-2258-452b-a4bf-b2fe1ad5e0d7" };
+          !function(){var t=window,e=document,a=function(){var t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://trinketsofcody.com/cody-widget.js";var a=e.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)};"complete"===document.readyState?a():t.attachEvent?t.attachEvent("onload",a):t.addEventListener("load",a,!1)}();
+        </script>
+  
+
+<div id="cody-wrapper"><style>
+  #cody-wrapper .cody-launcher {
+    position: var(--position) !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--launcher-bottom) !important;
+    border-radius: 9999px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 999999 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: box-shadow, scale 300ms linear !important;
+    animation: cody-launcher-pulse 4s infinite !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    cursor: pointer !important;
+    --icon-margin: 12px;
+    --close-icon-margin: 16px;
+  }
+
+    #cody-wrapper {
+    --position: fixed;
+    --left: unset;
+    --right: 20px;
+    --launcher-bottom: 20px;
+    --frame-bottom: 90px;
+    --background-color: #FBD647;
+    --text-color: #020617;
+    --shadow-color: 251, 214, 71;
+  }
+
+  @media screen and (max-width: 512px) {
+    #cody-wrapper {
+      --left: unset;
+      --right: 10px;
+    }
+  }
+
+  
+  #cody-wrapper .cody-launcher:hover {
+    scale: 1.1 !important;
+  }
+
+  #cody-wrapper .cody-launcher .cody-close-icon {
+    display: none !important;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-icon {
+    display: none !important;;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-close-icon {
+    display: block !important;;
+  }
+
+  #cody-wrapper .cody-iframe {
+    z-index: 99999 !important;
+    transition: visibility .5s, opacity .5s linear !important;
+    background-color: #fff !important;
+    position: fixed !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--frame-bottom) !important;
+    height: 75vh !important;
+    width: 448px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 18, 26, .08), 0 3px 12px rgba(0, 18, 26, .16), 0 2px 14px 0 rgba(0, 18, 26, .2) !important;
+    border: 0 !important;
+    display: none !important;
+  }
+
+  @media screen and (max-height: 667px) {
+    #cody-wrapper .cody-iframe {
+      height: calc(100vh - 110px) !important;
+    }
+  }
+
+  @media screen and (max-width: 448px) {
+    #cody-wrapper .cody-iframe {
+      width: calc(100vw - 20px) !important;
+    }
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-iframe {
+    display: block !important;
+  }
+
+  @keyframes cody-launcher-pulse {
+    0%, 100% {
+      box-shadow: 0 0 18px 4px rgba(var(--shadow-color), 0.8);
+    }
+    50% {
+      box-shadow: 0 0 12px 3px rgba(var(--shadow-color), 0.4);
+    }
+  }
+</style>
+
+<button class="cody-launcher" style="width: 56px; height: 56px; font-size: 16px;">
+    <svg class="cody-icon" style="aspect-ratio: 1 / 1; width: 100%; height: 100%; margin: var(--icon-margin)" aria-hidden="true" viewBox="5 7 45 45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <path d="M41.18 17.86a52.75 52.75 0 0 0-19 0c-.54.1-7.9 2.7-7.9 2.7h.01c-2.9 1.01-4.91 3.75-4.91 6.9v4.85c0 2.96 1.78 5.56 4.4 6.7l17.91 8.93v-6.67c3.18 0 6.36-.29 9.5-.86 4.13-.76 7.13-4.36 7.13-8.56v-5.44c-.01-4.19-3.01-7.79-7.14-8.55zm3.47 14c0 2.43-1.74 4.52-4.13 4.95-2.91.53-5.88.8-8.84.8s-5.93-.27-8.84-.8c-2.39-.44-4.13-2.52-4.13-4.95v-5.44c0-2.43 1.74-4.52 4.13-4.95 2.91-.53 5.88-.8 8.84-.8s5.93.27 8.84.8c2.39.44 4.13 2.52 4.13 4.95v5.44z" fill="currentColor"></path>
+    <path d="M26.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c-.01.85-.69 1.53-1.53 1.53zM37.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c0 .85-.68 1.53-1.53 1.53z" fill="currentColor"></path>
+</svg>    <svg style="aspect-ratio: 1/1; width: 100%; height: 100%; margin: var(--close-icon-margin);" class="cody-close-icon" launchercloseicon="chevron-down" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" fill="currentColor"></path>
+</svg></button></div></body></html>

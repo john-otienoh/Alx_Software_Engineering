@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/302 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/cody-widget.js"></script><script async="" src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/pendo.js"></script><script async="" src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":341641,"visitorType":"student","batch":{"id":156,"fullNameWithC":"NBO-1023 (C#21)","schoolLocation":{"id":7,"name":"Nairobi"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+      <!-- Pendo -->
+  <script>
+    (function(apiKey){
+      (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+      v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.eu.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        pendo.initialize({"visitor":{"id":"johnteclaire@gmail.com","email":"johnteclaire@gmail.com","isLearner":true,"isStaff":false,"prgCohortId":156,"prgCohortName":"NBO-1023 (C#21)","id_svna":341641,"curId_svna":1,"curName_svna":"SE Foundations","curCohortId_svna":156,"curCohortName_svna":"NBO-1023 (C#21)","curCohortSchLocName_svna":"Nairobi","curCohortSchLocId_svna":7}});
+    })('3353b3bd-f678-4388-5809-8944627d3f27');
+  </script>
+  <!-- End Pendo -->
+
+
+    <title>Project: 0x09. Web infrastructure design | Nairobi Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/application_alx-cd2824357fd83bf02c4467af44fc37e45b1bcca0798f3adda4b0e7fbf24bd58f.css">
+      <script src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/application-155318ef1e6ece1830f3fcc07f099b7c97969c23088ac3367048c471b5f2bf44.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="2BBUUdbgVu20COaN3EbpyEcrZRfFKJqF6gziYpGN7C9IRgjSU2beCHDPG81aQSA_-8XeA92Vs0CDZ0a5c8qJ9Q">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+
+      <!-- React -->
+      <script src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/application-9a15fd1e90588c3c8e15.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/application-87456da7.css">
+
+
+  </head>
+
+  <body class="signed_in env_production notranslate sidebar-collapsed" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <div data-react-class="header/Header" data-react-props="{&quot;ehubHeaderSdkJsUrl&quot;:null,&quot;logoUrl&quot;:&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;,&quot;logoClickUrl&quot;:&quot;/&quot;,&quot;discord&quot;:{&quot;label&quot;:&quot;Discord&quot;,&quot;targetUrl&quot;:&quot;https://discord.com/app&quot;,&quot;linkOpts&quot;:{&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noreferrer&quot;}},&quot;user&quot;:{&quot;myProfileUrl&quot;:&quot;/users/my_profile&quot;,&quot;profilePictureUrl&quot;:&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;},&quot;listItems&quot;:[{&quot;label&quot;:&quot;My Planning&quot;,&quot;iconName&quot;:&quot;calendar&quot;,&quot;targetUrl&quot;:&quot;/planning/me&quot;},{&quot;label&quot;:&quot;Projects&quot;,&quot;iconName&quot;:&quot;code-fork&quot;,&quot;targetUrl&quot;:&quot;/projects/current&quot;,&quot;id&quot;:&quot;sidebar-current-projects-item&quot;},{&quot;label&quot;:&quot;QA Reviews I can make&quot;,&quot;iconName&quot;:&quot;check&quot;,&quot;targetUrl&quot;:&quot;/corrections/to_review&quot;},{&quot;label&quot;:&quot;Evaluation quizzes&quot;,&quot;iconName&quot;:&quot;question&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_current_evaluation_quizzes&quot;},{&quot;label&quot;:&quot;My resources&quot;},{&quot;label&quot;:&quot;Curriculums&quot;,&quot;iconName&quot;:&quot;graduation-cap&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_curriculums&quot;},{&quot;label&quot;:&quot;Concepts&quot;,&quot;iconName&quot;:&quot;file-text&quot;,&quot;targetUrl&quot;:&quot;/concepts&quot;,&quot;id&quot;:&quot;sidebar-concepts-item&quot;},{&quot;label&quot;:&quot;Conference rooms&quot;,&quot;iconName&quot;:&quot;comments&quot;,&quot;targetUrl&quot;:&quot;/dashboards/video_rooms&quot;,&quot;id&quot;:&quot;sidebar-dashboards-video-rooms&quot;},{&quot;label&quot;:&quot;Servers&quot;,&quot;iconName&quot;:&quot;server&quot;,&quot;targetUrl&quot;:&quot;/servers&quot;},{&quot;label&quot;:&quot;Sandboxes&quot;,&quot;iconName&quot;:&quot;terminal&quot;,&quot;targetUrl&quot;:&quot;/user_containers/current&quot;,&quot;id&quot;:&quot;sidebar-dashboards-my-containers&quot;},{&quot;label&quot;:&quot;Tools&quot;,&quot;iconName&quot;:&quot;wrench&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_tools&quot;},{&quot;label&quot;:&quot;Video on demand&quot;,&quot;iconName&quot;:&quot;film&quot;,&quot;targetUrl&quot;:&quot;/dashboards/videos&quot;},{&quot;label&quot;:&quot;My Campus&quot;},{&quot;label&quot;:&quot;Peers&quot;,&quot;iconName&quot;:&quot;users&quot;,&quot;targetUrl&quot;:&quot;/users/peers&quot;}]}" data-react-cache-id="header/Header-0"><div class="header d-flex align-items-center bg-white border-bottom position-fixed top-0 w-full" style="background-color: white; border-color: rgb(229, 230, 230); z-index: 1000;"><div class="header-left align-items-center d-flex position-fixed px-2" style="z-index: 2;"><div class="hamburger mb-0 p-2" style="cursor: pointer; font-size: 24px;"><i class="fa-solid fa-fas fa-bars"></i></div><a class="logo-container bg-white p-1" href="https://intranet.alxswe.com/" target=""><div class="logo mx-auto" style="background-image: url(&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;); background-size: contain; height: 40px; width: 40px;"></div></a></div><div class="header-right d-flex align-items-center flex-grow-1 justify-content-center" style="z-index: 1;"></div></div><div class="sidebar navigation bg-white border-right position-fixed overflow-scroll bottom-0 start-0 " id="sidebar" style="background-color: white; border-color: rgb(238, 238, 238);"><ul class="px-2"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Home"><a href="https://intranet.alxswe.com/" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Home</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">My Planning</div></a></span></li><li class="d-flex align-items-center" id="sidebar-current-projects-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Projects</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">QA Reviews I can make</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Evaluation quizzes</div></a></span></li><hr title="My resources"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Curriculums</div></a></span></li><li class="d-flex align-items-center" id="sidebar-concepts-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Concepts</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-video-rooms"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Conference rooms</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Servers</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-my-containers"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Sandboxes</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Tools"><a href="https://intranet.alxswe.com/dashboards/my_tools" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Tools</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Video on demand</div></a></span></li><hr title="My Campus"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Peers</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Discord"><a href="https://discord.com/app" target="_blank" rel="noreferrer"><div class="icon"><i aria-hidden="true" class="fa-brands fa-discord"></i></div><div class="text-muted flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">Discord</div></a></span></li><li class="d-flex align-items-center bg-white border-top border-right position-fixed p-2 bottom-0 start-0 mb-0" style="background-color: white; border-color: rgb(238, 238, 238);"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile"><a href="https://intranet.alxswe.com/users/my_profile"><div class="image "><div class="inner" style="background-image: url(&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;);"></div></div><div class="text-muted d-none flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">My Profile</div></a></span></li></ul></div></div>
+
+
+    <main class="content" id="content">
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="dropdown d-flex flex-column gap-1">
+    <div aria-haspopup="true" aria-expanded="false" class="align-items-center d-flex gap-3" data-toggle="dropdown" id="student-switch-curriculum-dropdown" role="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-600" style="font-size: 15px !important;">
+          SE Foundations
+        </span>
+        <span class="fs-small text-muted">
+          Average: <span class="fw-500">76.93%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up  fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down  fa-fw"></i>
+        </span>
+      </div>
+    </div>
+
+    <ul aria-labelledby="student-switch-curriculum-dropdown" class="dropdown-menu fs-5">
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/1/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  SE Foundations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">76.93%</span>
+                </span>
+              </div>
+
+                <span class="fw-600 text-info" style="margin-left: 42px">
+                  <i aria-hidden="true" class="fa-solid fa-check "></i>
+                </span>
+            </div>
+</a>        </li>
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/17/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  Short Specializations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">73.33%</span>
+                </span>
+              </div>
+
+            </div>
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-xs-12 col-lg-10 contains-images">
+
+      <h1 class="gap">
+    0x09. Web infrastructure design
+    
+  </h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:6,&quot;value&quot;:&quot;DevOps&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:23,&quot;value&quot;:&quot;SysAdmin&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:45,&quot;value&quot;:&quot;web infrastructure&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">DevOps</span><span class="label label-primary" style="font-size: 14px;">SysAdmin</span><span class="label label-primary" style="font-size: 14px;">web infrastructure</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:false,&quot;requires_manual_correction&quot;:true,&quot;manual_done_at&quot;:&quot;2024-04-20T11:21:21.000+03:00&quot;},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-04-04T06:00:00.000+03:00&quot;,&quot;ends_at&quot;:&quot;2024-04-08T06:00:00.000+03:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-04-13T06:00:00.000+03:00&quot;},&quot;team&quot;:{&quot;in_team_of&quot;:3,&quot;members&quot;:[&quot;John Otieno&quot;]}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-gear fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-users fa-fw"></i> Project to be done in teams of 3 people (your team: John Otieno)</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-04-04 06:00 (GMT+03:00)"><span class="datetime">Apr 4, 2024 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-04-08 06:00 (GMT+03:00)"><span class="datetime">Apr 8, 2024 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-square-check fa-fw"></i> Manual QA review was done on <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-04-20 11:21 (GMT+03:00)"><span class="datetime">Apr 20, 2024 11:21 AM</span></span></li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+      <li>
+        <strong>Manual QA review:</strong>
+          0.0/42 mandatory
+            &amp;
+            0.0/5 optional
+      </li>
+
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>0.0%</strong>
+        <ul>
+          <li>Mandatory: 0.0%</li>
+            <li>Optional: 0.0%</li>
+            <li>
+              Calculation:&nbsp;
+                  0.0%
+                    + (0.0% * 0.0%)
+              &nbsp;==&nbsp;<strong>0.0%</strong>
+            </li>
+        </ul>
+    </li>
+  </ul>
+
+    <strong>Overall comment:</strong>
+    <p class="text-muted">
+      Project was failed automatically.
+    </p>
+</div>
+
+
+
+
+
+    <div id="project_id" style="display: none" data-project-id="302"></div>
+
+
+
+      
+
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at these concepts:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/12">DNS</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/13">Monitoring</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/17">Web Server</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/33">Network basics</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/46">Load balancer</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/67">Server</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <iframe width="560" height="315" src="./Project_ 0x09. Web infrastructure design _ Nairobi Intranet_files/lQNEW76KdYg.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><strong>Network basics</strong> concept page</li>
+<li><strong>Server</strong> concept page</li>
+<li><strong>Web server</strong> concept page</li>
+<li><strong>DNS</strong> concept page</li>
+<li><strong>Load balancer</strong> concept page</li>
+<li><strong>Monitoring</strong> concept page</li>
+<li><a href="https://intranet.alxswe.com/rltoken/n3CdS3EA5l5psDDKbEhApA" title="What is a database" target="_blank">What is a database</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/_GjAhwXE79iPaj7ZTDdqaQ" title="What&#39;s the difference between a web server and an app server?" target="_blank">What’s the difference between a web server and an app server?</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/Pl3UoEfAO7K_jUKRLMmnAQ" title="DNS record types" target="_blank">DNS record types</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/uxpx2YhXs10TFLIDg78chA" title="Single point of failure" target="_blank">Single point of failure</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/4ansLu2gtHnoFrNThqyObA" title="How to avoid downtime when deploying new code" target="_blank">How to avoid downtime when deploying new code</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/TAJeVYy9U9iLaEDd6XkbRA" title="High availability cluster (active-active/active-passive)" target="_blank">High availability cluster (active-active/active-passive)</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/c0zs2MxrmxFLsCPOizxq6g" title="What is HTTPS" target="_blank">What is HTTPS</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/j6idMcUTyNEDj1oYDQFmUw" title="What is a firewall" target="_blank">What is a firewall</a> </li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/FPJvEE-DRJDvmVTNWeFR8A" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>You must be able to draw a diagram covering the web stack you built with the sysadmin/devops track projects</li>
+<li>You must be able to explain what each component is doing</li>
+<li>You must be able to explain system redundancy</li>
+<li>Know all the mentioned acronyms: LAMP, SPOF, QPS</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+<li>For each task, once you are done whiteboarding (on a whiteboard, piece of paper or software or your choice), take a picture/screenshot of your diagram</li>
+<li>This project will be manually reviewed:</li>
+<li>As each task is completed, the name of that task will turn green</li>
+<li>Upload a screenshot, showing that you completed the required levels, to any image hosting service (I personally use <a href="https://intranet.alxswe.com/rltoken/m_O2HLsKrO1zg31LMcLOGQ" title="imgur" target="_blank">imgur</a> but feel free to use anything you want). </li>
+<li>For the following tasks, insert the link from of your screenshot into the answer file </li>
+<li>After pushing your answer file to GitHub, insert the GitHub file link into the URL box</li>
+<li>You will also have to whiteboard each task in front of a mentor, staff or student - no computer or notes will be allowed during the whiteboarding session</li>
+<li>Focus on what you are being asked: </li>
+<li>Cover what the requirements mention, we will explore details in a later project</li>
+<li>Keep in mind that you will have 30 minutes to perform the exercise, you will get points for what is asked in requirements</li>
+<li>Similarly in a job interview, you should answer what the interviewer asked for, be careful about being too verbose - always ask the interviewer if going into details is necessary - speaking too much can play against you</li>
+<li>In this project, again, avoid going in details if not asked</li>
+</ul>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Show quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: none;">
+          <div class="quiz_question_item_container" data-role="quiz_question197" data-position="2">
+            <div class=" clearfix" id="quiz_question-197">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is a web server?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="197">
+                <li class="">
+
+  <input type="radio" name="197" id="197-1500349941412" value="1500349941412" data-quiz-answer-id="1500349941412" data-quiz-question-id="197" disabled="disabled">
+  <label for="197-1500349941412"><p>A web server is a software or physical device serving web pages over HTTP.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="197" id="197-1500350010977" value="1500350010977" data-quiz-answer-id="1500350010977" data-quiz-question-id="197" disabled="disabled" checked="checked">
+  <label for="197-1500350010977"><p>A web server is a software that serves web pages to clients upon their request, it does this over the protocol HTTP.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="197" id="197-1500350065816" value="1500350065816" data-quiz-answer-id="1500350065816" data-quiz-question-id="197" disabled="disabled">
+  <label for="197-1500350065816"><p>A web server is a software that serves web pages to clients upon their request.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question200" data-position="5">
+            <div class=" clearfix" id="quiz_question-200">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is a DNS?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="200">
+                <li class="">
+
+  <input type="radio" name="200" id="200-1500350778981" value="1500350778981" data-quiz-answer-id="1500350778981" data-quiz-question-id="200" disabled="disabled">
+  <label for="200-1500350778981"><p>A list of domain names.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="200" id="200-1500350859301" value="1500350859301" data-quiz-answer-id="1500350859301" data-quiz-question-id="200" disabled="disabled" checked="checked">
+  <label for="200-1500350859301"><p>A system to translate domain names into IP addresses.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="200" id="200-1500350921490" value="1500350921490" data-quiz-answer-id="1500350921490" data-quiz-question-id="200" disabled="disabled">
+  <label for="200-1500350921490"><p>A system that contain all Internet IPs.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question201" data-position="6">
+            <div class=" clearfix" id="quiz_question-201">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is HTTPS?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="201">
+                <li class="">
+
+  <input type="radio" name="201" id="201-1500351759727" value="1500351759727" data-quiz-answer-id="1500351759727" data-quiz-question-id="201" disabled="disabled">
+  <label for="201-1500351759727"><p>A faster version of HTTP.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="201" id="201-1500351766668" value="1500351766668" data-quiz-answer-id="1500351766668" data-quiz-question-id="201" disabled="disabled">
+  <label for="201-1500351766668"><p>A version of HTTP that protect your personal information.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="201" id="201-1500351799721" value="1500351799721" data-quiz-answer-id="1500351799721" data-quiz-question-id="201" disabled="disabled" checked="checked">
+  <label for="201-1500351799721"><p>A version of HTTP that secure the traffic between your browser and the website by encrypting it.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question202" data-position="7">
+            <div class=" clearfix" id="quiz_question-202">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is TCP/IP?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="202">
+                <li class="">
+
+  <input type="radio" name="202" id="202-1500352214568" value="1500352214568" data-quiz-answer-id="1500352214568" data-quiz-question-id="202" disabled="disabled" checked="checked">
+  <label for="202-1500352214568"><p>Transmission Control Protocol/Internet Protocol, is a suite of communications protocols used to interconnect network devices on the Internet or any private network.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="202" id="202-1500352236564" value="1500352236564" data-quiz-answer-id="1500352236564" data-quiz-question-id="202" disabled="disabled">
+  <label for="202-1500352236564"><p>Transmission Control Protocol/Internet Protocol, is a suite of communications protocols used to interconnect network devices on the Internet.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="202" id="202-1500352243387" value="1500352243387" data-quiz-answer-id="1500352243387" data-quiz-question-id="202" disabled="disabled">
+  <label for="202-1500352243387"><p>Transmission Control Protocol/Internet Protocol, is a suite of communications protocols used to interconnect network devices on private network.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question198" data-position="3">
+            <div class=" clearfix" id="quiz_question-198">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is a codebase?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="198">
+                <li class="">
+
+  <input type="radio" name="198" id="198-1500350227244" value="1500350227244" data-quiz-answer-id="1500350227244" data-quiz-question-id="198" disabled="disabled">
+  <label for="198-1500350227244"><p>A list of software libraries.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="198" id="198-1500350237695" value="1500350237695" data-quiz-answer-id="1500350237695" data-quiz-question-id="198" disabled="disabled" checked="checked">
+  <label for="198-1500350237695"><p>Is the collection of source code that is used to build a software system.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="198" id="198-1500350292432" value="1500350292432" data-quiz-answer-id="1500350292432" data-quiz-question-id="198" disabled="disabled">
+  <label for="198-1500350292432"><p>Is the most important files of a software system.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question199" data-position="4">
+            <div class=" clearfix" id="quiz_question-199">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is a database?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="199">
+                <li class="">
+
+  <input type="radio" name="199" id="199-1500350320243" value="1500350320243" data-quiz-answer-id="1500350320243" data-quiz-question-id="199" disabled="disabled">
+  <label for="199-1500350320243"><p>Is a collection of text files that are stored so that it can be easily accessed, updated and managed by the local application.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="199" id="199-1500350354211" value="1500350354211" data-quiz-answer-id="1500350354211" data-quiz-question-id="199" disabled="disabled">
+  <label for="199-1500350354211"><p>Is a collection of information that is stored on a physical server and organized so that it can be easily accessed, updated and managed.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="199" id="199-1500350380872" value="1500350380872" data-quiz-answer-id="1500350380872" data-quiz-question-id="199" disabled="disabled" checked="checked">
+  <label for="199-1500350380872"><p>Is a collection of information that is stored and organized so that it can be easily accessed, updated and managed.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question196" data-position="1">
+            <div class=" clearfix" id="quiz_question-196">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is a server?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="196">
+                <li class="">
+
+  <input type="radio" name="196" id="196-1500349599150" value="1500349599150" data-quiz-answer-id="1500349599150" data-quiz-question-id="196" disabled="disabled" checked="checked">
+  <label for="196-1500349599150"><p>A server is a device, a virtual device or computer program or providing functionality for other programs or devices, called “clients”.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="196" id="196-1500349781028" value="1500349781028" data-quiz-answer-id="1500349781028" data-quiz-question-id="196" disabled="disabled">
+  <label for="196-1500349781028"><p>A server is a software that serves web pages.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="196" id="196-1500349815591" value="1500349815591" data-quiz-answer-id="1500349815591" data-quiz-question-id="196" disabled="disabled">
+  <label for="196-1500349815591"><p>A server is returning information to other computers when asked.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+      </section>
+    </div>
+  </div>
+
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task1754" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-1754">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Simple web stack
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1754" data-correction-id="28956944">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>A lot of websites are powered by simple web infrastructure, a lot of time it is composed of a single server with a <a href="https://intranet.alxswe.com/rltoken/YVDX0XsC6XHp0nmezvT9vQ" title="LAMP stack" target="_blank">LAMP stack</a>.</p>
+
+<p>On a whiteboard, design a one server web infrastructure that hosts the website that is reachable via <code>www.foobar.com</code>. Start your explanation by having a user wanting to access your website.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must use:
+
+<ul>
+<li>1 server</li>
+<li>1 web server (Nginx)</li>
+<li>1 application server</li>
+<li>1 application files (your code base)</li>
+<li>1 database (MySQL)</li>
+<li>1 domain name <code>foobar.com</code> configured with a <code>www</code> record that points to your server IP <code>8.8.8.8</code></li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>What is a server</li>
+<li>What is the role of the domain name</li>
+<li>What type of DNS record <code>www</code> is in <code>www.foobar.com</code></li>
+<li>What is the role of the web server</li>
+<li>What is the role of the application server</li>
+<li>What is the role of the database</li>
+<li>What is the server using to communicate with the computer of the user requesting the website</li>
+</ul></li>
+<li>You must be able to explain what the issues are with this infrastructure:
+
+<ul>
+<li>SPOF</li>
+<li>Downtime when maintenance needed (like deploying new code web server needs to be restarted)</li>
+<li>Cannot scale if too much incoming traffic</li>
+</ul></li>
+</ul>
+
+<p>Please, remember that everything must be written in English to further your technical ability in a variety of settings.</p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+      <div class="list-group-item">
+        <div class="blog_post_div">
+          <h4>Add URLs here:</h4>
+
+
+          <div class="input-group">
+            <input id="input_1754" autocomplete="off" type="text" value="" class="form-control">
+            <span class="input-group-btn">
+              <button data-task-requesting="0" data-user-id="341641" data-task-id="1754" type="button" class="add_task_url btn btn-primary">
+                Save
+              </button>
+            </span>
+          </div>
+
+          <div class="task_url_error_msg" data-task-id="1754"></div>
+
+          <ol class="list_1754 sm-gap">
+          </ol>
+
+        </div>
+      </div>
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x09-web_infrastructure_design</code></li>
+            <li>File: <code>0-simple_web_stack</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="1754" data-toggle="modal" data-target="#task-qa-review-1754-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1754}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1754-modal" data-correction-id="28956944" data-task-id="1754">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Simple web stack</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1755" data-position="2" id="task-num-1">
+      <div class="panel panel-default task-card " id="task-1755">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      1. Distributed web infrastructure
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1755" data-correction-id="28956944">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must add:
+
+<ul>
+<li>2 servers</li>
+<li>1 web server (Nginx)</li>
+<li>1 application server</li>
+<li>1 load-balancer (HAproxy)</li>
+<li>1 set of application files (your code base)</li>
+<li>1 database (MySQL)</li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>For every additional element, why you are adding it</li>
+<li>What distribution algorithm your load balancer is configured with and how it works</li>
+<li>Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both</li>
+<li>How a database Primary-Replica (Master-Slave) cluster works</li>
+<li>What is the difference between the Primary node and the Replica node in regard to the application</li>
+</ul></li>
+<li>You must be able to explain what the issues are with this infrastructure:
+
+<ul>
+<li>Where are SPOF</li>
+<li>Security issues (no firewall, no HTTPS)</li>
+<li>No monitoring</li>
+</ul></li>
+</ul>
+
+<p>Please, remember that everything must be written in English to further your technical ability in a variety of settings.</p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+      <div class="list-group-item">
+        <div class="blog_post_div">
+          <h4>Add URLs here:</h4>
+
+
+          <div class="input-group">
+            <input id="input_1755" autocomplete="off" type="text" value="" class="form-control">
+            <span class="input-group-btn">
+              <button data-task-requesting="0" data-user-id="341641" data-task-id="1755" type="button" class="add_task_url btn btn-primary">
+                Save
+              </button>
+            </span>
+          </div>
+
+          <div class="task_url_error_msg" data-task-id="1755"></div>
+
+          <ol class="list_1755 sm-gap">
+          </ol>
+
+        </div>
+      </div>
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x09-web_infrastructure_design</code></li>
+            <li>File: <code>1-distributed_web_infrastructure</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="1755" data-toggle="modal" data-target="#task-qa-review-1755-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1755}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1755-modal" data-correction-id="28956944" data-task-id="1755">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">1. Distributed web infrastructure</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1756" data-position="3" id="task-num-2">
+      <div class="panel panel-default task-card " id="task-1756">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. Secured and monitored web infrastructure
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1756" data-correction-id="28956944">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>, it must be secured, serve encrypted traffic, and be monitored.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must add:
+
+<ul>
+<li>3 firewalls </li>
+<li>1 SSL certificate to serve <code>www.foobar.com</code> over HTTPS</li>
+<li>3 monitoring clients (data collector for Sumologic or other monitoring services)</li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>For every additional element, why you are adding it</li>
+<li>What are firewalls for</li>
+<li>Why is the traffic served over HTTPS</li>
+<li>What monitoring is used for</li>
+<li>How the monitoring tool is collecting data</li>
+<li>Explain what to do if you want to monitor your web server QPS</li>
+</ul></li>
+<li>You must be able to explain what the issues are with this infrastructure:
+
+<ul>
+<li>Why terminating SSL at the load balancer level is an issue</li>
+<li>Why having only one MySQL server capable of accepting writes is an issue</li>
+<li>Why having servers with all the same components (database, web server and application server) might be a problem</li>
+</ul></li>
+</ul>
+
+<p>Please, remember that everything must be written in English to further your technical ability in a variety of settings.</p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+      <div class="list-group-item">
+        <div class="blog_post_div">
+          <h4>Add URLs here:</h4>
+
+
+          <div class="input-group">
+            <input id="input_1756" autocomplete="off" type="text" value="" class="form-control">
+            <span class="input-group-btn">
+              <button data-task-requesting="0" data-user-id="341641" data-task-id="1756" type="button" class="add_task_url btn btn-primary">
+                Save
+              </button>
+            </span>
+          </div>
+
+          <div class="task_url_error_msg" data-task-id="1756"></div>
+
+          <ol class="list_1756 sm-gap">
+          </ol>
+
+        </div>
+      </div>
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x09-web_infrastructure_design</code></li>
+            <li>File: <code>2-secured_and_monitored_web_infrastructure</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="1756" data-toggle="modal" data-target="#task-qa-review-1756-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1756}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1756-modal" data-correction-id="28956944" data-task-id="1756">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">2. Secured and monitored web infrastructure</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1793" data-position="4" id="task-num-3">
+      <div class="panel panel-default task-card " id="task-1793">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. Scale up
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          #advanced
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1793" data-correction-id="28956944">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Readme</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/lvTwy7Ix9PsB-R5pzIOm9w" title="Application server vs web server" target="_blank">Application server vs web server</a></li>
+</ul>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must add:
+
+<ul>
+<li>1 server</li>
+<li>1 load-balancer (HAproxy) configured as cluster with the other one</li>
+<li>Split components (web server, application server, database) with their own server</li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>For every additional element, why you are adding it</li>
+</ul></li>
+</ul>
+
+<p>Please, remember that everything must be written in English to further your technical ability in a variety of settings.</p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+      <div class="list-group-item">
+        <div class="blog_post_div">
+          <h4>Add URLs here:</h4>
+
+
+          <div class="input-group">
+            <input id="input_1793" autocomplete="off" type="text" value="" class="form-control">
+            <span class="input-group-btn">
+              <button data-task-requesting="0" data-user-id="341641" data-task-id="1793" type="button" class="add_task_url btn btn-primary">
+                Save
+              </button>
+            </span>
+          </div>
+
+          <div class="task_url_error_msg" data-task-id="1793"></div>
+
+          <ol class="list_1793 sm-gap">
+          </ol>
+
+        </div>
+      </div>
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x09-web_infrastructure_design</code></li>
+            <li>File: <code>3-scale_up</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="1793" data-toggle="modal" data-target="#task-qa-review-1793-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1793}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1793-modal" data-correction-id="28956944" data-task-id="1793">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">3. Scale up</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+            <div data-react-class="projects/ProjectReadyForReview" data-react-props="{&quot;csrfToken&quot;:&quot;OaJE61ceW2nOsQ6ZpFGHmqqdqIPcKqTxmamdtYHkR3Kp9Bho0pjTjAp289kiVk5tFnMTl8SXjTTwwjluY6MiqA&quot;,&quot;firstReview&quot;:false,&quot;peerReview&quot;:{&quot;availableReviewersURI&quot;:&quot;/corrections/28956944/available_reviewers.json&quot;,&quot;canReviewPeerDirectly&quot;:true,&quot;cancelReadyForReviewURI&quot;:&quot;/corrections/28956944/cancel_ready_for_review.json&quot;,&quot;closeAt&quot;:&quot;2024-04-13T06:00:00.000+03:00&quot;,&quot;correctCorrectionURI&quot;:&quot;https://intranet.alxswe.com/corrections/28956944/correct&quot;,&quot;disabled&quot;:false,&quot;manualReviewBehavior&quot;:&quot;any_student&quot;,&quot;openAt&quot;:&quot;2024-04-04T06:00:00.000+03:00&quot;,&quot;qaReviewsURI&quot;:&quot;/corrections/to_review&quot;,&quot;readyForReviewURI&quot;:&quot;/corrections/28956944/toggle_ready_for_review.json&quot;,&quot;synchronousManualReview&quot;:false},&quot;toggled&quot;:false}" data-react-cache-id="projects/ProjectReadyForReview-0"><div class="row gap"><div class="col-md-12"><div class="text-center"><button class="btn btn-lg btn-primary">Ready for a new review</button></div></div></div></div>
+
+
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+      </article>
+
+        <div class="copyright">Copyright © 2024 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary atop-help" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa-solid fa-magnifying-glass "></i>
+  <i aria-hidden="true" class="fa-solid fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" autocomplete="off" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+        <script id="cody-snippet">
+          window.codySettings = { widget_id: "9993bc72-2258-452b-a4bf-b2fe1ad5e0d7" };
+          !function(){var t=window,e=document,a=function(){var t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://trinketsofcody.com/cody-widget.js";var a=e.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)};"complete"===document.readyState?a():t.attachEvent?t.attachEvent("onload",a):t.addEventListener("load",a,!1)}();
+        </script>
+  
+
+<div id="cody-wrapper"><style>
+  #cody-wrapper .cody-launcher {
+    position: var(--position) !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--launcher-bottom) !important;
+    border-radius: 9999px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 999999 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: box-shadow, scale 300ms linear !important;
+    animation: cody-launcher-pulse 4s infinite !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    cursor: pointer !important;
+    --icon-margin: 12px;
+    --close-icon-margin: 16px;
+  }
+
+    #cody-wrapper {
+    --position: fixed;
+    --left: unset;
+    --right: 20px;
+    --launcher-bottom: 20px;
+    --frame-bottom: 90px;
+    --background-color: #FBD647;
+    --text-color: #020617;
+    --shadow-color: 251, 214, 71;
+  }
+
+  @media screen and (max-width: 512px) {
+    #cody-wrapper {
+      --left: unset;
+      --right: 10px;
+    }
+  }
+
+  
+  #cody-wrapper .cody-launcher:hover {
+    scale: 1.1 !important;
+  }
+
+  #cody-wrapper .cody-launcher .cody-close-icon {
+    display: none !important;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-icon {
+    display: none !important;;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-close-icon {
+    display: block !important;;
+  }
+
+  #cody-wrapper .cody-iframe {
+    z-index: 99999 !important;
+    transition: visibility .5s, opacity .5s linear !important;
+    background-color: #fff !important;
+    position: fixed !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--frame-bottom) !important;
+    height: 75vh !important;
+    width: 448px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 18, 26, .08), 0 3px 12px rgba(0, 18, 26, .16), 0 2px 14px 0 rgba(0, 18, 26, .2) !important;
+    border: 0 !important;
+    display: none !important;
+  }
+
+  @media screen and (max-height: 667px) {
+    #cody-wrapper .cody-iframe {
+      height: calc(100vh - 110px) !important;
+    }
+  }
+
+  @media screen and (max-width: 448px) {
+    #cody-wrapper .cody-iframe {
+      width: calc(100vw - 20px) !important;
+    }
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-iframe {
+    display: block !important;
+  }
+
+  @keyframes cody-launcher-pulse {
+    0%, 100% {
+      box-shadow: 0 0 18px 4px rgba(var(--shadow-color), 0.8);
+    }
+    50% {
+      box-shadow: 0 0 12px 3px rgba(var(--shadow-color), 0.4);
+    }
+  }
+</style>
+
+<button class="cody-launcher" style="width: 56px; height: 56px; font-size: 16px;">
+    <svg class="cody-icon" style="aspect-ratio: 1 / 1; width: 100%; height: 100%; margin: var(--icon-margin)" aria-hidden="true" viewBox="5 7 45 45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <path d="M41.18 17.86a52.75 52.75 0 0 0-19 0c-.54.1-7.9 2.7-7.9 2.7h.01c-2.9 1.01-4.91 3.75-4.91 6.9v4.85c0 2.96 1.78 5.56 4.4 6.7l17.91 8.93v-6.67c3.18 0 6.36-.29 9.5-.86 4.13-.76 7.13-4.36 7.13-8.56v-5.44c-.01-4.19-3.01-7.79-7.14-8.55zm3.47 14c0 2.43-1.74 4.52-4.13 4.95-2.91.53-5.88.8-8.84.8s-5.93-.27-8.84-.8c-2.39-.44-4.13-2.52-4.13-4.95v-5.44c0-2.43 1.74-4.52 4.13-4.95 2.91-.53 5.88-.8 8.84-.8s5.93.27 8.84.8c2.39.44 4.13 2.52 4.13 4.95v5.44z" fill="currentColor"></path>
+    <path d="M26.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c-.01.85-.69 1.53-1.53 1.53zM37.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c0 .85-.68 1.53-1.53 1.53z" fill="currentColor"></path>
+</svg>    <svg style="aspect-ratio: 1/1; width: 100%; height: 100%; margin: var(--close-icon-margin);" class="cody-close-icon" launchercloseicon="chevron-down" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" fill="currentColor"></path>
+</svg></button></div></body></html>

@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/266 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/cody-widget.js"></script><script async="" src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/pendo.js"></script><script async="" src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":341641,"visitorType":"student","batch":{"id":156,"fullNameWithC":"NBO-1023 (C#21)","schoolLocation":{"id":7,"name":"Nairobi"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+      <!-- Pendo -->
+  <script>
+    (function(apiKey){
+      (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+      v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.eu.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        pendo.initialize({"visitor":{"id":"johnteclaire@gmail.com","email":"johnteclaire@gmail.com","isLearner":true,"isStaff":false,"prgCohortId":156,"prgCohortName":"NBO-1023 (C#21)","id_svna":341641,"curId_svna":1,"curName_svna":"SE Foundations","curCohortId_svna":156,"curCohortName_svna":"NBO-1023 (C#21)","curCohortSchLocName_svna":"Nairobi","curCohortSchLocId_svna":7}});
+    })('3353b3bd-f678-4388-5809-8944627d3f27');
+  </script>
+  <!-- End Pendo -->
+
+
+    <title>Project: 0x0C. Web server | Nairobi Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x0C. Web server _ Nairobi Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x0C. Web server _ Nairobi Intranet_files/application_alx-cd2824357fd83bf02c4467af44fc37e45b1bcca0798f3adda4b0e7fbf24bd58f.css">
+      <script src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/application-155318ef1e6ece1830f3fcc07f099b7c97969c23088ac3367048c471b5f2bf44.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="8WsTmhvJH88Y7dWeY0z_MlXUp0xIM7uMgolPZhksn-1hPU8Znk-XKtwqKN7lSzbF6TocWFCOkknr4uu9-2v6Nw">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+
+      <!-- React -->
+      <script src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/application-9a15fd1e90588c3c8e15.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x0C. Web server _ Nairobi Intranet_files/application-87456da7.css">
+
+
+  </head>
+
+  <body class="signed_in env_production notranslate sidebar-collapsed" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <div data-react-class="header/Header" data-react-props="{&quot;ehubHeaderSdkJsUrl&quot;:null,&quot;logoUrl&quot;:&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;,&quot;logoClickUrl&quot;:&quot;/&quot;,&quot;discord&quot;:{&quot;label&quot;:&quot;Discord&quot;,&quot;targetUrl&quot;:&quot;https://discord.com/app&quot;,&quot;linkOpts&quot;:{&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noreferrer&quot;}},&quot;user&quot;:{&quot;myProfileUrl&quot;:&quot;/users/my_profile&quot;,&quot;profilePictureUrl&quot;:&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;},&quot;listItems&quot;:[{&quot;label&quot;:&quot;My Planning&quot;,&quot;iconName&quot;:&quot;calendar&quot;,&quot;targetUrl&quot;:&quot;/planning/me&quot;},{&quot;label&quot;:&quot;Projects&quot;,&quot;iconName&quot;:&quot;code-fork&quot;,&quot;targetUrl&quot;:&quot;/projects/current&quot;,&quot;id&quot;:&quot;sidebar-current-projects-item&quot;},{&quot;label&quot;:&quot;QA Reviews I can make&quot;,&quot;iconName&quot;:&quot;check&quot;,&quot;targetUrl&quot;:&quot;/corrections/to_review&quot;},{&quot;label&quot;:&quot;Evaluation quizzes&quot;,&quot;iconName&quot;:&quot;question&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_current_evaluation_quizzes&quot;},{&quot;label&quot;:&quot;My resources&quot;},{&quot;label&quot;:&quot;Curriculums&quot;,&quot;iconName&quot;:&quot;graduation-cap&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_curriculums&quot;},{&quot;label&quot;:&quot;Concepts&quot;,&quot;iconName&quot;:&quot;file-text&quot;,&quot;targetUrl&quot;:&quot;/concepts&quot;,&quot;id&quot;:&quot;sidebar-concepts-item&quot;},{&quot;label&quot;:&quot;Conference rooms&quot;,&quot;iconName&quot;:&quot;comments&quot;,&quot;targetUrl&quot;:&quot;/dashboards/video_rooms&quot;,&quot;id&quot;:&quot;sidebar-dashboards-video-rooms&quot;},{&quot;label&quot;:&quot;Servers&quot;,&quot;iconName&quot;:&quot;server&quot;,&quot;targetUrl&quot;:&quot;/servers&quot;},{&quot;label&quot;:&quot;Sandboxes&quot;,&quot;iconName&quot;:&quot;terminal&quot;,&quot;targetUrl&quot;:&quot;/user_containers/current&quot;,&quot;id&quot;:&quot;sidebar-dashboards-my-containers&quot;},{&quot;label&quot;:&quot;Tools&quot;,&quot;iconName&quot;:&quot;wrench&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_tools&quot;},{&quot;label&quot;:&quot;Video on demand&quot;,&quot;iconName&quot;:&quot;film&quot;,&quot;targetUrl&quot;:&quot;/dashboards/videos&quot;},{&quot;label&quot;:&quot;My Campus&quot;},{&quot;label&quot;:&quot;Peers&quot;,&quot;iconName&quot;:&quot;users&quot;,&quot;targetUrl&quot;:&quot;/users/peers&quot;}]}" data-react-cache-id="header/Header-0"><div class="header d-flex align-items-center bg-white border-bottom position-fixed top-0 w-full" style="background-color: white; border-color: rgb(229, 230, 230); z-index: 1000;"><div class="header-left align-items-center d-flex position-fixed px-2" style="z-index: 2;"><div class="hamburger mb-0 p-2" style="cursor: pointer; font-size: 24px;"><i class="fa-solid fa-fas fa-bars"></i></div><a class="logo-container bg-white p-1" href="https://intranet.alxswe.com/" target=""><div class="logo mx-auto" style="background-image: url(&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;); background-size: contain; height: 40px; width: 40px;"></div></a></div><div class="header-right d-flex align-items-center flex-grow-1 justify-content-center" style="z-index: 1;"></div></div><div class="sidebar navigation bg-white border-right position-fixed overflow-scroll bottom-0 start-0 " id="sidebar" style="background-color: white; border-color: rgb(238, 238, 238);"><ul class="px-2"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Home"><a href="https://intranet.alxswe.com/" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Home</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">My Planning</div></a></span></li><li class="d-flex align-items-center" id="sidebar-current-projects-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Projects</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">QA Reviews I can make</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Evaluation quizzes</div></a></span></li><hr title="My resources"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Curriculums</div></a></span></li><li class="d-flex align-items-center" id="sidebar-concepts-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Concepts</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-video-rooms"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Conference rooms</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Servers</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-my-containers"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Sandboxes</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Tools"><a href="https://intranet.alxswe.com/dashboards/my_tools" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Tools</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Video on demand</div></a></span></li><hr title="My Campus"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Peers</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Discord"><a href="https://discord.com/app" target="_blank" rel="noreferrer"><div class="icon"><i aria-hidden="true" class="fa-brands fa-discord"></i></div><div class="text-muted flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">Discord</div></a></span></li><li class="d-flex align-items-center bg-white border-top border-right position-fixed p-2 bottom-0 start-0 mb-0" style="background-color: white; border-color: rgb(238, 238, 238);"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile"><a href="https://intranet.alxswe.com/users/my_profile"><div class="image "><div class="inner" style="background-image: url(&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;);"></div></div><div class="text-muted d-none flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">My Profile</div></a></span></li></ul></div></div>
+
+
+    <main class="content" id="content">
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="dropdown d-flex flex-column gap-1">
+    <div aria-haspopup="true" aria-expanded="false" class="align-items-center d-flex gap-3" data-toggle="dropdown" id="student-switch-curriculum-dropdown" role="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-600" style="font-size: 15px !important;">
+          SE Foundations
+        </span>
+        <span class="fs-small text-muted">
+          Average: <span class="fw-500">76.93%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up  fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down  fa-fw"></i>
+        </span>
+      </div>
+    </div>
+
+    <ul aria-labelledby="student-switch-curriculum-dropdown" class="dropdown-menu fs-5">
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/1/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  SE Foundations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">76.93%</span>
+                </span>
+              </div>
+
+                <span class="fw-600 text-info" style="margin-left: 42px">
+                  <i aria-hidden="true" class="fa-solid fa-check "></i>
+                </span>
+            </div>
+</a>        </li>
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/17/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  Short Specializations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">73.33%</span>
+                </span>
+              </div>
+
+            </div>
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-xs-12 col-lg-10 contains-images">
+
+      <h1 class="gap">
+    0x0C. Web server
+    
+  </h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:6,&quot;value&quot;:&quot;DevOps&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:23,&quot;value&quot;:&quot;SysAdmin&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">DevOps</span><span class="label label-primary" style="font-size: 14px;">SysAdmin</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-05-06T06:00:00.000+03:00&quot;,&quot;ends_at&quot;:&quot;2024-05-08T06:00:00.000+03:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-05-09T06:00:00.000+03:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-gear fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-05-06 06:00 (GMT+03:00)"><span class="datetime">May 6, 2024 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-05-08 06:00 (GMT+03:00)"><span class="datetime">May 8, 2024 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-square-check fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          2.0/13 mandatory
+            &amp;
+            4.0/4 optional
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>30.76%</strong>
+        <ul>
+          <li>Mandatory: 15.38%</li>
+            <li>Optional: 100.0%</li>
+            <li>
+              Calculation:&nbsp;
+                  15.38%
+                    + (15.38% * 100.0%)
+              &nbsp;==&nbsp;<strong>30.76%</strong>
+            </li>
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+    <div id="project_id" style="display: none" data-project-id="266"></div>
+
+
+
+      
+
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at this concept:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/110">What is a Child Process?</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <p><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/8Gu52Qv.png" alt="" loading="lazy" style=""></p>
+
+<h2>Background Context</h2>
+
+<p><a href="https://www.youtube.com/watch?v=AZg4uJkEa-4&amp;feature=youtu.be&amp;hd=1" target="_blank"><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/Screenshot+2017-07-06+19.24.05.png" alt="" loading="lazy" style=""></a></p>
+
+<p>In this project, some of the tasks will be graded on 2 aspects:</p>
+
+<ol>
+<li>Is your <code>web-01</code> server configured according to requirements</li>
+<li>Does your answer file contain a Bash script that automatically performs commands to configure an Ubuntu machine to fit requirements (meaning without any human intervention)</li>
+</ol>
+
+<p>For example, if I need to create a file <code>/tmp/test</code> containing the string <code>hello world</code> and modify the configuration of Nginx to listen on port <code>8080</code> instead of <code>80</code>, I can use <code>emacs</code> on my server to create the file and to modify the Nginx configuration file <code>/etc/nginx/sites-enabled/default</code>.</p>
+
+<p>But my answer file would contain:</p>
+
+<pre><code>sylvain@ubuntu cat 88-script_example
+#!/usr/bin/env bash
+# Configuring a server with specification XYZ
+echo hello world &gt; /tmp/test
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sylvain@ubuntu
+</code></pre>
+
+<p>As you can tell, I am not using <code>emacs</code> to perform the task in my answer file. This exercise is aiming at training you on automating your work. If you can automate tasks that you do manually, you can then automate yourself out of repetitive tasks and focus your energy on something more interesting. For an <a href="https://intranet.alxswe.com/rltoken/9I0WufjKdW3TZA2EVrGnlQ" title="SRE" target="_blank">SRE</a>, that comes very handy when there are hundreds or thousands of servers to manage, the work cannot be only done manually. Note that the checker will execute your script as the <code>root</code> user, you do not need to use the <code>sudo</code> command.</p>
+
+<p>A good Software Engineer is a <a href="https://intranet.alxswe.com/rltoken/sRY__axKNHhNW0SVmsUC_A" title="lazy Software Engineer" target="_blank">lazy Software Engineer</a>.
+<img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/82VsYEC.jpg" alt="" loading="lazy" style=""></p>
+
+<p>Tips: to test your answer Bash script, feel free to reproduce the checker environment: </p>
+
+<ul>
+<li>start a <code>Ubuntu 16.04</code> sandbox</li>
+<li>run your script on it</li>
+<li>see how it behaves</li>
+</ul>
+
+<h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/6TI3HiyFdwrbXWKVF24Gxw" title="How the web works" target="_blank">How the web works</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/vkVMGlaf39j2DWAQWzo6EA" title="Nginx" target="_blank">Nginx</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/zKrpVxWuUHVdW4URAjdFbw" title="How to Configure Nginx" target="_blank">How to Configure Nginx</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/Ar18u5sRis1fkvkVgzdcqg" title="Child process concept page" target="_blank">Child process concept page</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/xi3peVqYl02PfpHHHlCtxQ" title="Root and sub domain" target="_blank">Root and sub domain</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/sBrrP4EAmI3NoYjIgZrUhw" title="HTTP requests" target="_blank">HTTP requests</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/Eaa4ZuKvye941hTkP8VlBQ" title="HTTP redirection" target="_blank">HTTP redirection</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/eJSp2QFTY6jqqNtz8OVDEw" title="Not found HTTP response code" target="_blank">Not found HTTP response code</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/7WMNY5CWD-CBrxmQrdmfPg" title="Logs files on Linux" target="_blank">Logs files on Linux</a> </li>
+</ul>
+
+<p><strong>For reference:</strong></p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/BGa6RrS0dnM6EdBGS_ZDUw" title="RFC 7231 (HTTP/1.1)" target="_blank">RFC 7231 (HTTP/1.1)</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/IZ2fyYn1qNZ9RXXsg5vG1g" title="RFC 7540 (HTTP/2)" target="_blank">RFC 7540 (HTTP/2)</a></li>
+</ul>
+
+<p><strong>man or help</strong>: </p>
+
+<ul>
+<li><code>scp</code></li>
+<li><code>curl</code></li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/EHyxcIwPtD2SzEGRKOnT3g" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What is the main role of a web server</li>
+<li>What is a child process</li>
+<li>Why web servers usually have a parent process and child processes</li>
+<li>What are the main HTTP requests</li>
+</ul>
+
+<h3>DNS</h3>
+
+<ul>
+<li>What DNS stands for</li>
+<li>What is DNS main role</li>
+</ul>
+
+<h3>DNS Record Types</h3>
+
+<ul>
+<li><code>A</code></li>
+<li><code>CNAME</code></li>
+<li><code>TXT</code></li>
+<li><code>MX</code></li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be interpreted on Ubuntu 16.04 LTS</li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+<li>All your Bash script files must be executable</li>
+<li>Your Bash script must pass <code>Shellcheck</code> (version <code>0.3.7</code>) without any error</li>
+<li>The first line of all your Bash scripts should be exactly <code>#!/usr/bin/env bash</code></li>
+<li>The second line of all your Bash scripts should be a comment explaining what is the script doing</li>
+<li>You can’t use <code>systemctl</code> for restarting a process</li>
+</ul>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Show quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: none;">
+          <div class="quiz_question_item_container" data-role="quiz_question518" data-position="2">
+            <div class=" clearfix" id="quiz_question-518">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>A web server is</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="518">
+                <li class="">
+
+  <input type="radio" name="518" id="518-1509573028589" value="1509573028589" data-quiz-answer-id="1509573028589" data-quiz-question-id="518" disabled="disabled" checked="checked">
+  <label for="518-1509573028589"><p>a software</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="518" id="518-1509573022485" value="1509573022485" data-quiz-answer-id="1509573022485" data-quiz-question-id="518" disabled="disabled">
+  <label for="518-1509573022485"><p>a physical machine</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question521" data-position="5">
+            <div class=" clearfix" id="quiz_question-521">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>A HTTP GET request is to</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="521">
+                <li class="">
+
+  <input type="radio" name="521" id="521-1509575983467" value="1509575983467" data-quiz-answer-id="1509575983467" data-quiz-question-id="521" disabled="disabled" checked="checked">
+  <label for="521-1509575983467"><p>request data</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="521" id="521-1509575994654" value="1509575994654" data-quiz-answer-id="1509575994654" data-quiz-question-id="521" disabled="disabled">
+  <label for="521-1509575994654"><p>submit data</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="521" id="521-1509576005855" value="1509576005855" data-quiz-answer-id="1509576005855" data-quiz-question-id="521" disabled="disabled">
+  <label for="521-1509576005855"><p>delete data</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question522" data-position="6">
+            <div class=" clearfix" id="quiz_question-522">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>A HTTP POST request is to</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="522">
+                <li class="">
+
+  <input type="radio" name="522" id="522-1509576014214" value="1509576014214" data-quiz-answer-id="1509576014214" data-quiz-question-id="522" disabled="disabled">
+  <label for="522-1509576014214"><p>request data</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="522" id="522-1509576022270" value="1509576022270" data-quiz-answer-id="1509576022270" data-quiz-question-id="522" disabled="disabled" checked="checked">
+  <label for="522-1509576022270"><p>submit data</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="522" id="522-1509576026309" value="1509576026309" data-quiz-answer-id="1509576026309" data-quiz-question-id="522" disabled="disabled">
+  <label for="522-1509576026309"><p>delete data</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question526" data-position="10">
+            <div class=" clearfix" id="quiz_question-526">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Why web servers usually use child processes?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="526">
+                <li class="">
+
+  <input type="radio" name="526" id="526-1509588974072" value="1509588974072" data-quiz-answer-id="1509588974072" data-quiz-question-id="526" disabled="disabled">
+  <label for="526-1509588974072"><p>That’s just a subjective technical choice from the developers who created the software</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="526" id="526-1509588994827" value="1509588994827" data-quiz-answer-id="1509588994827" data-quiz-question-id="526" disabled="disabled" checked="checked">
+  <label for="526-1509588994827"><p>So that the web server can dynamically change the number of child process to accommodate the volume of requests to be processed</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="526" id="526-1509589023160" value="1509589023160" data-quiz-answer-id="1509589023160" data-quiz-question-id="526" disabled="disabled">
+  <label for="526-1509589023160"><p>To prevent memory leak</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question525" data-position="9">
+            <div class=" clearfix" id="quiz_question-525">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is TTL within the context of DNS</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="525">
+                <li class="">
+
+  <input type="radio" name="525" id="525-1509576210064" value="1509576210064" data-quiz-answer-id="1509576210064" data-quiz-question-id="525" disabled="disabled" checked="checked">
+  <label for="525-1509576210064"><p>a time period when DNS query results are cached</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="525" id="525-1509576228536" value="1509576228536" data-quiz-answer-id="1509576228536" data-quiz-question-id="525" disabled="disabled">
+  <label for="525-1509576228536"><p>a time period when DNS is not answering requests</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="525" id="525-1509576242638" value="1509576242638" data-quiz-answer-id="1509576242638" data-quiz-question-id="525" disabled="disabled">
+  <label for="525-1509576242638"><p>a time period for DNS maintenance</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question523" data-position="7">
+            <div class=" clearfix" id="quiz_question-523">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>A DNS A record translates to</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="523">
+                <li class="">
+
+  <input type="radio" name="523" id="523-1509576096010" value="1509576096010" data-quiz-answer-id="1509576096010" data-quiz-question-id="523" disabled="disabled">
+  <label for="523-1509576096010"><p>a domain</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="523" id="523-1509576088941" value="1509576088941" data-quiz-answer-id="1509576088941" data-quiz-question-id="523" disabled="disabled" checked="checked">
+  <label for="523-1509576088941"><p>an IP</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question519" data-position="3">
+            <div class=" clearfix" id="quiz_question-519">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The main role of DNS is to</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="519">
+                <li class="">
+
+  <input type="radio" name="519" id="519-1509575404721" value="1509575404721" data-quiz-answer-id="1509575404721" data-quiz-question-id="519" disabled="disabled" checked="checked">
+  <label for="519-1509575404721"><p>translate domain name into IP address</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="519" id="519-1509575417553" value="1509575417553" data-quiz-answer-id="1509575417553" data-quiz-question-id="519" disabled="disabled">
+  <label for="519-1509575417553"><p>translate domain name into port</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="519" id="519-1509575435322" value="1509575435322" data-quiz-answer-id="1509575435322" data-quiz-question-id="519" disabled="disabled">
+  <label for="519-1509575435322"><p>name websites</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question520" data-position="4">
+            <div class=" clearfix" id="quiz_question-520">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What was one of the most important reason for which DNS was created</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="520">
+                <li class="">
+
+  <input type="radio" name="520" id="520-1509575510693" value="1509575510693" data-quiz-answer-id="1509575510693" data-quiz-question-id="520" disabled="disabled" checked="checked">
+  <label for="520-1509575510693"><p>because humans are not good at remembering long sequences of numbers (IP address)</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="520" id="520-1509575529400" value="1509575529400" data-quiz-answer-id="1509575529400" data-quiz-question-id="520" disabled="disabled">
+  <label for="520-1509575529400"><p>to connect the Internet</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="520" id="520-1509575552513" value="1509575552513" data-quiz-answer-id="1509575552513" data-quiz-question-id="520" disabled="disabled">
+  <label for="520-1509575552513"><p>to index the web</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question524" data-position="8">
+            <div class=" clearfix" id="quiz_question-524">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>A DNS CNAME record translates to</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="524">
+                <li class="">
+
+  <input type="radio" name="524" id="524-1509576127919" value="1509576127919" data-quiz-answer-id="1509576127919" data-quiz-question-id="524" disabled="disabled" checked="checked">
+  <label for="524-1509576127919"><p>a domain</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="524" id="524-1509576125215" value="1509576125215" data-quiz-answer-id="1509576125215" data-quiz-question-id="524" disabled="disabled">
+  <label for="524-1509576125215"><p>an IP</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question516" data-position="1">
+            <div class=" clearfix" id="quiz_question-516">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The main role of a web server is to</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="516">
+                <li class="">
+
+  <input type="radio" name="516" id="516-1509572684973" value="1509572684973" data-quiz-answer-id="1509572684973" data-quiz-question-id="516" disabled="disabled">
+  <label for="516-1509572684973"><p>serve dynamic content</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="516" id="516-1509572704804" value="1509572704804" data-quiz-answer-id="1509572704804" data-quiz-question-id="516" disabled="disabled" checked="checked">
+  <label for="516-1509572704804"><p>serve static content</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="516" id="516-1509572712795" value="1509572712795" data-quiz-answer-id="1509572712795" data-quiz-question-id="516" disabled="disabled">
+  <label for="516-1509572712795"><p>host files</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+      </section>
+    </div>
+  </div>
+
+
+          <h2 class="gap">
+    Your servers
+  </h2>
+
+  <div class="panel panel-default overflow_visible">
+    <div class="panel-body">
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>IP</th>
+      <th>State</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>341641-web-01</td>
+        <td><code></code></td>
+        <td><code></code></td>
+        <td></td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
+              Actions
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+
+              <li role="separator" class="divider"></li>
+
+                <li><a data-confirm="Did you set your SSH Key in your intranet profile?" href="https://intranet.alxswe.com/servers/ask_new_by_name?name=341641-web-01&amp;project_id=266">Ask a server</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+  </div>
+
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task1399" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-1399">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Transfer a file to your server
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1399" data-correction-id="32242954">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a Bash script that transfers a file from our client to a server:</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Accepts 4 parameters
+
+<ol>
+<li>The path to the file to be transferred</li>
+<li>The IP of the server we want to transfer the file to</li>
+<li>The username <code>scp</code> connects with</li>
+<li>The path to the SSH private key that <code>scp</code> uses</li>
+</ol></li>
+<li>Display <code>Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY</code> if less than 3 parameters passed</li>
+<li><code>scp</code> must transfer the file to the user home directory <code>~/</code></li>
+<li>Strict host key checking must be disabled when using <code>scp</code> </li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>sylvain@ubuntu$ ./0-transfer_file
+Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
+sylvain@ubuntu$
+sylvain@ubuntu$ ssh ubuntu@8.8.8.8 -i /vagrant/sylvain 'ls ~/'
+afile
+sylvain@ubuntu$ 
+sylvain@ubuntu$ touch some_page.html
+sylvain@ubuntu$ ./0-transfer_file some_page.html 8.8.8.8 sylvain /vagrant/private_key
+some_page.html                                     100%   12     0.1KB/s   00:00
+sylvain@ubuntu$ ssh ubuntu@8.8.8.8 -i /vagrant/private_key 'ls ~/'
+afile
+some_page.html
+sylvain@ubuntu$
+</code></pre>
+
+<p>In this example, I:</p>
+
+<ul>
+<li>remotely execute the <code>ls ~/</code> command via <code>ssh</code> to see what <code>~/</code> contains</li>
+<li>create a file named <code>some_page.html</code></li>
+<li>execute my <code>0-transfer_file</code> script</li>
+<li> remotely execute the <code>ls ~/</code> command via <code>ssh</code> to see that the file <code>some_page.html</code> has been successfully transferred</li>
+</ul>
+
+<p>That is one way of publishing your website pages to your server.</p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x0C-web_server</code></li>
+            <li>File: <code>0-transfer_file</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1399-modal-button" data-task-id="1399" data-toggle="modal" data-target="#task-test-correction-1399-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1399}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1399-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Transfer a file to your server"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1399">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1399">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1399">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1399" data-correction-id="32242954">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1399}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1399" data-toggle="modal" data-target="#task-qa-review-1399-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1399}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1399-modal" data-correction-id="32242954" data-task-id="1399">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Transfer a file to your server</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1400" data-position="2" id="task-num-1">
+      <div class="panel panel-default task-card " id="task-1400">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      1. Install nginx web server
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1400" data-correction-id="32242954">
+        <div class="task_progress_bar" style="width: 75.0%">
+          <div class="task_score_bar" style="width: 50.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">37.5%</span> (<span class="task_progress_value">Checks completed: 75.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/01cab59e881e31842b8d47a0974e8d3b6f0f2001.jpg" alt="" loading="lazy" style=""></p>
+
+<p>Readme:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/KJiFZ4yJyTGp_cv3DYQLaQ" title="-y on apt-get command" target="_blank">-y on apt-get command</a></li>
+</ul>
+
+<p>Web servers are the piece of software generating and serving HTML pages, let’s install one!</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Install <code>nginx</code> on your <code>web-01</code></li>
+<li> server</li>
+<li>Nginx should be listening on port 80</li>
+<li>When querying Nginx at its root <code>/</code> with a GET request (requesting a page)  using <code>curl</code>, it must return a page that contains the string <code>Hello World!</code></li>
+<li>As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)</li>
+<li>You can’t use <code>systemctl</code> for restarting <code>nginx</code></li>
+</ul>
+
+<p>Server terminal:</p>
+
+<pre><code>root@sy-web-01$ ./1-install_nginx_web_server &gt; /dev/null 2&gt;&amp;1
+root@sy-web-01$ 
+root@sy-web-01$ curl localhost
+Hello World!
+root@sy-web-01$ 
+</code></pre>
+
+<p>Local terminal:</p>
+
+<pre><code>sylvain@ubuntu$ curl 34.198.248.145/
+Hello World!
+sylvain@ubuntu$ curl -sI 34.198.248.145/
+HTTP/1.1 200 OK
+Server: nginx/1.4.6 (Ubuntu)
+Date: Tue, 21 Feb 2017 23:43:22 GMT
+Content-Type: text/html
+Content-Length: 30
+Last-Modified: Tue, 21 Feb 2017 07:21:32 GMT
+Connection: keep-alive
+ETag: "58abea7c-1e"
+Accept-Ranges: bytes
+
+sylvain@ubuntu$
+</code></pre>
+
+<p>In this example <code>34.198.248.145</code> is the IP of my <code>web-01</code> server. If you want to query the Nginx that is locally installed on your server, you can use <code>curl 127.0.0.1</code>.</p>
+
+<p>If things are not going as expected, make sure to check out Nginx logs, they can be found in <code>/var/log/</code>.</p>
+
+<p><strong>Maarten’s PRO-tip:</strong> When you use <code>sudo su</code> on your web-01 you can become root like this to test your file:</p>
+
+<pre><code>sylvain@ubuntu$ sudo su
+root@ubuntu#
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x0C-web_server</code></li>
+            <li>File: <code>1-install_nginx_web_server</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1400-modal-button" data-task-id="1400" data-toggle="modal" data-target="#task-test-correction-1400-correction-modal" id="task-num-1-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1400}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1400-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "1. Install nginx web server"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1400">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1400">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1400">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1400" data-correction-id="32242954">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1400}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1400" data-toggle="modal" data-target="#task-qa-review-1400-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1400}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1400-modal" data-correction-id="32242954" data-task-id="1400">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">1. Install nginx web server</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1401" data-position="3" id="task-num-2">
+      <div class="panel panel-default task-card " id="task-1401">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. Setup a domain name
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1401" data-correction-id="32242954">
+        <div class="task_progress_bar" style="width: 50.0%">
+          <div class="task_score_bar" style="width: 50.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">25.0%</span> (<span class="task_progress_value">Checks completed: 50.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p><a href="https://get.tech/" title=".TECH Domains" target="_blank">.TECH Domains</a> is one of the top domain providers. They are known for the stability and quality of their DNS hosting solution. We partnered with .TECH Domains so that you can learn about DNS.</p>
+
+<p><strong>YOU</strong> can have a <strong>free .tech domain</strong> for 1 year by following these steps:</p>
+
+<ul>
+<li>Access the <a href="https://intranet.alxswe.com/dashboards/my_tools" title="tools space" target="_blank">tools space</a></li>
+<li>Unlock the <strong>GitHub student pack</strong>: WARNING - this invitation link is unique to you and can’t be reclaimed! If you have any issue, please contact <a href="https://support.github.com/request/landing" title="GitHub education support" target="_blank">GitHub education support</a></li>
+</ul>
+
+<p><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/b685ce8e2cae17f1edf5eaf8bc09a5b6d1b4bb8f.png" alt="" loading="lazy" style="height: 200px"></p>
+
+<ul>
+<li>When registered, access your <a href="https://github.com/login?client_id=de7e3b6548f2ed9bbceb&amp;return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Dde7e3b6548f2ed9bbceb%26redirect_uri%3Dhttps%253A%252F%252Feducation.github.com%252Fauth%252Fgithubber%252Fcallback%26response_type%3Dcode%26scope%3Dread%253Auser%26state%3D3cbd7536e1f790e9f372dce1d64193884e9b0a0903eb9bba" title="benefits" target="_blank">benefits</a>:</li>
+</ul>
+
+<p><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/eb4046306303faed2a6de4fdd634d5ac959fd763.png" alt="" loading="lazy" style="height: 200px"></p>
+
+<ul>
+<li>And scroll to <strong>.Tech domain</strong>:</li>
+</ul>
+
+<p><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/368388422d1cf757af7017483b70ffd415c3a455.png" alt="" loading="lazy" style="height: 300px"></p>
+
+<ul>
+<li>Start to register your domain and checkout</li>
+<li>At the Checkout step, please click on “Login with GitHub”:</li>
+</ul>
+
+<p><img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/91a4c94fa971df87066aacabb68b9839b08c7f28.png" alt="" loading="lazy" style="height: 100px">
+<img src="./Project_ 0x0C. Web server _ Nairobi Intranet_files/6247533b7b283cb2333375a1993c3490b92730d3.png" alt="" loading="lazy" style="height: 300px"></p>
+
+<ul>
+<li>The cost of the domain should be now at <strong>$0</strong></li>
+<li>You can finalize it by creating an account in <a href="https://get.tech/" title=".Tech domains" target="_blank">.Tech domains</a></li>
+<li>And manage your domain there!</li>
+</ul>
+
+<p>Provide the domain name in your answer file.</p>
+
+<p>Requirement:</p>
+
+<ul>
+<li>provide the domain name only (example: <code>foobar.tech</code>), no subdomain (example: <code>www.foobar.tech</code>)</li>
+<li>configure your DNS records with an A entry so that your root domain points to your <code>web-01</code> IP address <strong>Warning: the propagation of your records can take time (~1-2 hours)</strong></li>
+<li>go to <a href="https://intranet.alxswe.com/users/my_profile" title="your profile" target="_blank">your profile</a> and enter your domain in the <code>Project website url</code> field</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>sylvain@ubuntu$ cat 2-setup_a_domain_name
+myschool.tech
+sylvain@ubuntu$
+sylvain@ubuntu$ dig myschool.tech
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; myschool.tech
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 26785
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;myschool.tech.     IN  A
+
+;; ANSWER SECTION:
+myschool.tech.  7199    IN  A   184.72.193.201
+
+;; Query time: 65 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Fri Aug 02 09:44:36 PDT 2019
+;; MSG SIZE  rcvd: 65
+
+sylvain@ubuntu$
+</code></pre>
+
+<p>When your domain name is setup, please verify the Registrar here: <a href="https://whois.whoisxmlapi.com/" title="https://whois.whoisxmlapi.com/" target="_blank">https://whois.whoisxmlapi.com/</a>  and you must see in the JSON response: <code>"registrarName": "Dotserve Inc"</code></p>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x0C-web_server</code></li>
+            <li>File: <code>2-setup_a_domain_name</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1401-modal-button" data-task-id="1401" data-toggle="modal" data-target="#task-test-correction-1401-correction-modal" id="task-num-2-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1401}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1401-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "2. Setup a domain name"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1401">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1401">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1401">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1401" data-correction-id="32242954">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1401}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1401" data-toggle="modal" data-target="#task-qa-review-1401-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1401}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1401-modal" data-correction-id="32242954" data-task-id="1401">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">2. Setup a domain name</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1402" data-position="4" id="task-num-3">
+      <div class="panel panel-default task-card " id="task-1402">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. Redirection
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1402" data-correction-id="32242954">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Readme:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/RRP9hX3MlQdABaKZD-Y_cA" title="Replace a line with multiple lines with sed" target="_blank">Replace a line with multiple lines with sed</a></li>
+</ul>
+
+<p>Configure your Nginx server so that <code>/redirect_me</code> is redirecting to another page.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>The redirection must be a “301 Moved Permanently”</li>
+<li>You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements</li>
+<li>Using what you did with <code>1-install_nginx_web_server</code>, write <code>3-redirection</code> so that it configures a brand new Ubuntu machine to the requirements asked in this task</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>sylvain@ubuntu$ curl -sI 34.198.248.145/redirect_me/
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.4.6 (Ubuntu)
+Date: Tue, 21 Feb 2017 21:36:04 GMT
+Content-Type: text/html
+Content-Length: 193
+Connection: keep-alive
+Location: https://www.youtube.com/watch?v=QH2-TGUlwu4
+
+sylvain@ubuntu$
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x0C-web_server</code></li>
+            <li>File: <code>3-redirection</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1402-modal-button" data-task-id="1402" data-toggle="modal" data-target="#task-test-correction-1402-correction-modal" id="task-num-3-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1402}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1402-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "3. Redirection"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1402">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1402">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1402">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1402" data-correction-id="32242954">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1402}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1402" data-toggle="modal" data-target="#task-qa-review-1402-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1402}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1402-modal" data-correction-id="32242954" data-task-id="1402">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">3. Redirection</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1403" data-position="5" id="task-num-4">
+      <div class="panel panel-default task-card " id="task-1403">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      4. Not found page 404
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1403" data-correction-id="32242954">
+        <div class="task_progress_bar" style="width: 0.0%">
+          <div class="task_score_bar" style="width: NaN%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0.0%</span> (<span class="task_progress_value">Checks completed: 0.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Configure your Nginx server to have a custom 404 page that contains the string <code>Ceci n'est pas une page</code>.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>The page must return an HTTP 404 error code</li>
+<li>The page must contain the string <code>Ceci n'est pas une page</code></li>
+<li>Using what you did with <code>3-redirection</code>, write <code>4-not_found_page_404</code> so that it configures a brand new Ubuntu machine to the requirements asked in this task</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>sylvain@ubuntu$ curl -sI 34.198.248.145/xyz
+HTTP/1.1 404 Not Found
+Server: nginx/1.4.6 (Ubuntu)
+Date: Tue, 21 Feb 2017 21:46:43 GMT
+Content-Type: text/html
+Content-Length: 26
+Connection: keep-alive
+ETag: "58acb50e-1a"
+
+sylvain@ubuntu$ curl 34.198.248.145/xyzfoo
+Ceci n'est pas une page
+
+sylvain@ubuntu$
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x0C-web_server</code></li>
+            <li>File: <code>4-not_found_page_404</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-1403-modal-button" data-task-id="1403" data-toggle="modal" data-target="#task-test-correction-1403-correction-modal" id="task-num-4-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1403}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1403-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "4. Not found page 404"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1403">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1403">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1403">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="1403" data-correction-id="32242954">
+        Mark submission
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1403}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1403" data-toggle="modal" data-target="#task-qa-review-1403-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1403}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1403-modal" data-correction-id="32242954" data-task-id="1403">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">4. Not found page 404</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task3830" data-position="7" id="task-num-5">
+      <div class="panel panel-default task-card " id="task-3830">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      5. Install Nginx web server (w/ Puppet)
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          #advanced
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="3830" data-correction-id="32242954">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Time to practice configuring your server with Puppet! Just as you did before, we’d like you to install and configure an Nginx server using Puppet instead of Bash. To save time and effort, you should also include resources in your manifest to perform a 301 redirect when querying /redirect_me.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Nginx should be listening on port 80</li>
+<li>When querying Nginx at its root <code>/</code> with a GET request (requesting a page)  using <code>curl</code>, it must return a page that contains the string <code>Hello World!</code></li>
+<li>The redirection must be a “301 Moved Permanently”</li>
+<li>Your answer file should be a Puppet manifest containing commands to automatically configure an Ubuntu machine to respect above requirements</li>
+</ul>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x0C-web_server</code></li>
+            <li>File: <code>7-puppet_install_nginx_web_server.pp</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-3830-modal-button" data-task-id="3830" data-toggle="modal" data-target="#task-test-correction-3830-correction-modal" id="task-num-5-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:3830}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-3830-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "5. Install Nginx web server (w/ Puppet)"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="3830">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="3830">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="3830">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="3830" data-toggle="modal" data-target="#task-qa-review-3830-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:3830}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-3830-modal" data-correction-id="32242954" data-task-id="3830">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">5. Install Nginx web server (w/ Puppet)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+
+          <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended Sandboxes</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;available&quot;:true,&quot;description&quot;:&quot;\u003cp\u003eBasic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations\u003c/p\u003e\n&quot;,&quot;id&quot;:39,&quot;name&quot;:&quot;Ubuntu 20.04&quot;,&quot;online&quot;:true},{&quot;available&quot;:true,&quot;description&quot;:&quot;\u003cp\u003eUbuntu 20.04, with Fabric 3 and Puppet\u003c/p\u003e\n&quot;,&quot;id&quot;:42,&quot;name&quot;:&quot;Ubuntu 20.04 - Fabric 3 \u0026 Puppet&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:2,&quot;csrfToken&quot;:&quot;Pxlxn_GiOicmbDWjMf77G7sztPfFaSCuso3CqGmbt6GvTy0cdCSywuKryOO3-TLsB90P493UCWvb5mZzi9zSew&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary"><i aria-hidden="true" class="fa-solid fa-filter"></i><span class="ml-2">Running only</span></a><div class="align-items-center d-flex" style="position: relative; width: 100%;"><input class="form-control" placeholder="Search for an image ..." type="search" value=""></div></div><div class="mt-3"><h3>2 images<small class="ml-2">(0/2 Sandboxes spawned)</small></h3></div><div class="mt-3"><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa-solid fa-terminal text-danger"></i><span class="ml-2">Ubuntu 20.04</span></h3><div class="mt-2 text-muted"><p>Basic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations</p>
+</div></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa-solid fa-play"></i><span class="ml-2">Run</span></a></div></div></div></div><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa-solid fa-terminal text-danger"></i><span class="ml-2">Ubuntu 20.04 - Fabric 3 &amp; Puppet</span></h3><div class="mt-2 text-muted"><p>Ubuntu 20.04, with Fabric 3 and Puppet</p>
+</div></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa-solid fa-play"></i><span class="ml-2">Run</span></a></div></div></div></div></div></div></div></div></div></div></div>
+
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+      </article>
+
+        <div class="copyright">Copyright © 2024 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary atop-help" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa-solid fa-magnifying-glass "></i>
+  <i aria-hidden="true" class="fa-solid fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" autocomplete="off" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+        <script id="cody-snippet">
+          window.codySettings = { widget_id: "9993bc72-2258-452b-a4bf-b2fe1ad5e0d7" };
+          !function(){var t=window,e=document,a=function(){var t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://trinketsofcody.com/cody-widget.js";var a=e.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)};"complete"===document.readyState?a():t.attachEvent?t.attachEvent("onload",a):t.addEventListener("load",a,!1)}();
+        </script>
+  
+
+<div id="cody-wrapper"><style>
+  #cody-wrapper .cody-launcher {
+    position: var(--position) !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--launcher-bottom) !important;
+    border-radius: 9999px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 999999 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: box-shadow, scale 300ms linear !important;
+    animation: cody-launcher-pulse 4s infinite !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    cursor: pointer !important;
+    --icon-margin: 12px;
+    --close-icon-margin: 16px;
+  }
+
+    #cody-wrapper {
+    --position: fixed;
+    --left: unset;
+    --right: 20px;
+    --launcher-bottom: 20px;
+    --frame-bottom: 90px;
+    --background-color: #FBD647;
+    --text-color: #020617;
+    --shadow-color: 251, 214, 71;
+  }
+
+  @media screen and (max-width: 512px) {
+    #cody-wrapper {
+      --left: unset;
+      --right: 10px;
+    }
+  }
+
+  
+  #cody-wrapper .cody-launcher:hover {
+    scale: 1.1 !important;
+  }
+
+  #cody-wrapper .cody-launcher .cody-close-icon {
+    display: none !important;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-icon {
+    display: none !important;;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-close-icon {
+    display: block !important;;
+  }
+
+  #cody-wrapper .cody-iframe {
+    z-index: 99999 !important;
+    transition: visibility .5s, opacity .5s linear !important;
+    background-color: #fff !important;
+    position: fixed !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--frame-bottom) !important;
+    height: 75vh !important;
+    width: 448px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 18, 26, .08), 0 3px 12px rgba(0, 18, 26, .16), 0 2px 14px 0 rgba(0, 18, 26, .2) !important;
+    border: 0 !important;
+    display: none !important;
+  }
+
+  @media screen and (max-height: 667px) {
+    #cody-wrapper .cody-iframe {
+      height: calc(100vh - 110px) !important;
+    }
+  }
+
+  @media screen and (max-width: 448px) {
+    #cody-wrapper .cody-iframe {
+      width: calc(100vw - 20px) !important;
+    }
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-iframe {
+    display: block !important;
+  }
+
+  @keyframes cody-launcher-pulse {
+    0%, 100% {
+      box-shadow: 0 0 18px 4px rgba(var(--shadow-color), 0.8);
+    }
+    50% {
+      box-shadow: 0 0 12px 3px rgba(var(--shadow-color), 0.4);
+    }
+  }
+</style>
+
+<button class="cody-launcher" style="width: 56px; height: 56px; font-size: 16px;">
+    <svg class="cody-icon" style="aspect-ratio: 1 / 1; width: 100%; height: 100%; margin: var(--icon-margin)" aria-hidden="true" viewBox="5 7 45 45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <path d="M41.18 17.86a52.75 52.75 0 0 0-19 0c-.54.1-7.9 2.7-7.9 2.7h.01c-2.9 1.01-4.91 3.75-4.91 6.9v4.85c0 2.96 1.78 5.56 4.4 6.7l17.91 8.93v-6.67c3.18 0 6.36-.29 9.5-.86 4.13-.76 7.13-4.36 7.13-8.56v-5.44c-.01-4.19-3.01-7.79-7.14-8.55zm3.47 14c0 2.43-1.74 4.52-4.13 4.95-2.91.53-5.88.8-8.84.8s-5.93-.27-8.84-.8c-2.39-.44-4.13-2.52-4.13-4.95v-5.44c0-2.43 1.74-4.52 4.13-4.95 2.91-.53 5.88-.8 8.84-.8s5.93.27 8.84.8c2.39.44 4.13 2.52 4.13 4.95v5.44z" fill="currentColor"></path>
+    <path d="M26.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c-.01.85-.69 1.53-1.53 1.53zM37.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c0 .85-.68 1.53-1.53 1.53z" fill="currentColor"></path>
+</svg>    <svg style="aspect-ratio: 1/1; width: 100%; height: 100%; margin: var(--close-icon-margin);" class="cody-close-icon" launchercloseicon="chevron-down" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" fill="currentColor"></path>
+</svg></button></div></body></html>

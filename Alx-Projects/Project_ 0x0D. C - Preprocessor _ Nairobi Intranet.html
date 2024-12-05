@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/224 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/cody-widget.js"></script><script async="" src="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/pendo.js"></script><script async="" src="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":341641,"visitorType":"student","batch":{"id":156,"fullNameWithC":"NBO-1023 (C#21)","schoolLocation":{"id":7,"name":"Nairobi"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+      <!-- Pendo -->
+  <script>
+    (function(apiKey){
+      (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+      v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.eu.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        pendo.initialize({"visitor":{"id":"johnteclaire@gmail.com","email":"johnteclaire@gmail.com","isLearner":true,"isStaff":false,"prgCohortId":156,"prgCohortName":"NBO-1023 (C#21)","id_svna":341641,"curId_svna":1,"curName_svna":"SE Foundations","curCohortId_svna":156,"curCohortName_svna":"NBO-1023 (C#21)","curCohortSchLocName_svna":"Nairobi","curCohortSchLocId_svna":7}});
+    })('3353b3bd-f678-4388-5809-8944627d3f27');
+  </script>
+  <!-- End Pendo -->
+
+
+    <title>Project: 0x0D. C - Preprocessor | Nairobi Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/application_alx-cd2824357fd83bf02c4467af44fc37e45b1bcca0798f3adda4b0e7fbf24bd58f.css">
+      <script src="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/application-155318ef1e6ece1830f3fcc07f099b7c97969c23088ac3367048c471b5f2bf44.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="BeB9kPUjGJ9YFmEEKtkdO99SMMN81gotpjZXgmUPZ2CVtiETcKWQepzRnESs3tTMY7yL12RrI-jPXfNZh0gCug">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+
+      <!-- React -->
+      <script src="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/application-9a15fd1e90588c3c8e15.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x0D. C - Preprocessor _ Nairobi Intranet_files/application-87456da7.css">
+
+
+  </head>
+
+  <body class="signed_in env_production notranslate sidebar-collapsed" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <div data-react-class="header/Header" data-react-props="{&quot;ehubHeaderSdkJsUrl&quot;:null,&quot;logoUrl&quot;:&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;,&quot;logoClickUrl&quot;:&quot;/&quot;,&quot;discord&quot;:{&quot;label&quot;:&quot;Discord&quot;,&quot;targetUrl&quot;:&quot;https://discord.com/app&quot;,&quot;linkOpts&quot;:{&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noreferrer&quot;}},&quot;user&quot;:{&quot;myProfileUrl&quot;:&quot;/users/my_profile&quot;,&quot;profilePictureUrl&quot;:&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;},&quot;listItems&quot;:[{&quot;label&quot;:&quot;My Planning&quot;,&quot;iconName&quot;:&quot;calendar&quot;,&quot;targetUrl&quot;:&quot;/planning/me&quot;},{&quot;label&quot;:&quot;Projects&quot;,&quot;iconName&quot;:&quot;code-fork&quot;,&quot;targetUrl&quot;:&quot;/projects/current&quot;,&quot;id&quot;:&quot;sidebar-current-projects-item&quot;},{&quot;label&quot;:&quot;QA Reviews I can make&quot;,&quot;iconName&quot;:&quot;check&quot;,&quot;targetUrl&quot;:&quot;/corrections/to_review&quot;},{&quot;label&quot;:&quot;Evaluation quizzes&quot;,&quot;iconName&quot;:&quot;question&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_current_evaluation_quizzes&quot;},{&quot;label&quot;:&quot;My resources&quot;},{&quot;label&quot;:&quot;Curriculums&quot;,&quot;iconName&quot;:&quot;graduation-cap&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_curriculums&quot;},{&quot;label&quot;:&quot;Concepts&quot;,&quot;iconName&quot;:&quot;file-text&quot;,&quot;targetUrl&quot;:&quot;/concepts&quot;,&quot;id&quot;:&quot;sidebar-concepts-item&quot;},{&quot;label&quot;:&quot;Conference rooms&quot;,&quot;iconName&quot;:&quot;comments&quot;,&quot;targetUrl&quot;:&quot;/dashboards/video_rooms&quot;,&quot;id&quot;:&quot;sidebar-dashboards-video-rooms&quot;},{&quot;label&quot;:&quot;Servers&quot;,&quot;iconName&quot;:&quot;server&quot;,&quot;targetUrl&quot;:&quot;/servers&quot;},{&quot;label&quot;:&quot;Sandboxes&quot;,&quot;iconName&quot;:&quot;terminal&quot;,&quot;targetUrl&quot;:&quot;/user_containers/current&quot;,&quot;id&quot;:&quot;sidebar-dashboards-my-containers&quot;},{&quot;label&quot;:&quot;Tools&quot;,&quot;iconName&quot;:&quot;wrench&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_tools&quot;},{&quot;label&quot;:&quot;Video on demand&quot;,&quot;iconName&quot;:&quot;film&quot;,&quot;targetUrl&quot;:&quot;/dashboards/videos&quot;},{&quot;label&quot;:&quot;My Campus&quot;},{&quot;label&quot;:&quot;Peers&quot;,&quot;iconName&quot;:&quot;users&quot;,&quot;targetUrl&quot;:&quot;/users/peers&quot;}]}" data-react-cache-id="header/Header-0"><div class="header d-flex align-items-center bg-white border-bottom position-fixed top-0 w-full" style="background-color: white; border-color: rgb(229, 230, 230); z-index: 1000;"><div class="header-left align-items-center d-flex position-fixed px-2" style="z-index: 2;"><div class="hamburger mb-0 p-2" style="cursor: pointer; font-size: 24px;"><i class="fa-solid fa-fas fa-bars"></i></div><a class="logo-container bg-white p-1" href="https://intranet.alxswe.com/" target=""><div class="logo mx-auto" style="background-image: url(&quot;https://intranet.alxswe.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;); background-size: contain; height: 40px; width: 40px;"></div></a></div><div class="header-right d-flex align-items-center flex-grow-1 justify-content-center" style="z-index: 1;"></div></div><div class="sidebar navigation bg-white border-right position-fixed overflow-scroll bottom-0 start-0 " id="sidebar" style="background-color: white; border-color: rgb(238, 238, 238);"><ul class="px-2"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Home"><a href="https://intranet.alxswe.com/" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Home</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">My Planning</div></a></span></li><li class="d-flex align-items-center" id="sidebar-current-projects-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Projects</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">QA Reviews I can make</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Evaluation quizzes</div></a></span></li><hr title="My resources"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Curriculums</div></a></span></li><li class="d-flex align-items-center" id="sidebar-concepts-item"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Concepts</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-video-rooms"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Conference rooms</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Servers</div></a></span></li><li class="d-flex align-items-center" id="sidebar-dashboards-my-containers"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Sandboxes</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Tools"><a href="https://intranet.alxswe.com/dashboards/my_tools" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Tools</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Video on demand</div></a></span></li><hr title="My Campus"><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users"></i></div><div class="pl-3 overflow-hidden text-nowrap" style="display: none;">Peers</div></a></span></li><li class="d-flex align-items-center"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="Discord"><a href="https://discord.com/app" target="_blank" rel="noreferrer"><div class="icon"><i aria-hidden="true" class="fa-brands fa-discord"></i></div><div class="text-muted flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">Discord</div></a></span></li><li class="d-flex align-items-center bg-white border-top border-right position-fixed p-2 bottom-0 start-0 mb-0" style="background-color: white; border-color: rgb(238, 238, 238);"><span data-container="body" data-html="false" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile"><a href="https://intranet.alxswe.com/users/my_profile"><div class="image "><div class="inner" style="background-image: url(&quot;https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEFMQmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fbe778fba22f8f9408f4bb2367dc860cbfe38fac/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/IMG_20240218_222222.jpg&quot;);"></div></div><div class="text-muted d-none flex-grow-1 pl-3 overflow-hidden text-nowrap" style="display: none;">My Profile</div></a></span></li></ul></div></div>
+
+
+    <main class="content" id="content">
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="dropdown d-flex flex-column gap-1">
+    <div aria-haspopup="true" aria-expanded="false" class="align-items-center d-flex gap-3" data-toggle="dropdown" id="student-switch-curriculum-dropdown" role="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-600" style="font-size: 15px !important;">
+          SE Foundations
+        </span>
+        <span class="fs-small text-muted">
+          Average: <span class="fw-500">76.93%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up  fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down  fa-fw"></i>
+        </span>
+      </div>
+    </div>
+
+    <ul aria-labelledby="student-switch-curriculum-dropdown" class="dropdown-menu fs-5">
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/1/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  SE Foundations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">76.93%</span>
+                </span>
+              </div>
+
+                <span class="fw-600 text-info" style="margin-left: 42px">
+                  <i aria-hidden="true" class="fa-solid fa-check "></i>
+                </span>
+            </div>
+</a>        </li>
+        <li>
+          <a href="https://intranet.alxswe.com/curriculums/17/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500" style="font-size: 15px !important;">
+                  Short Specializations
+                </span>
+                <span class="text-muted" style="font-size: 14px !important;">
+                  Average: <span class="fw-500">73.33%</span>
+                </span>
+              </div>
+
+            </div>
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-xs-12 col-lg-10 contains-images">
+
+      <h1 class="gap">
+    0x0D. C - Preprocessor
+    
+  </h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:7,&quot;value&quot;:&quot;C&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">C</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2023-11-27T06:00:00.000+03:00&quot;,&quot;ends_at&quot;:&quot;2023-11-28T06:00:00.000+03:00&quot;,&quot;second_deadline_at&quot;:&quot;2023-11-29T06:00:00.000+03:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-gear fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-11-27 06:00 (GMT+03:00)"><span class="datetime">Nov 27, 2023 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-11-28 06:00 (GMT+03:00)"><span class="datetime">Nov 28, 2023 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-square-check fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          38.0/38 mandatory
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>100.0%</strong>
+        <ul>
+          <li>Mandatory: 100.0%</li>
+            <li>Optional: no optional tasks</li>
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+    <div id="project_id" style="display: none" data-project-id="224"></div>
+
+
+
+      
+
+      
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/X0ithSsqlz_D0c8V8uA1HQ" title="Understanding C program Compilation Process" target="_blank">Understanding C program Compilation Process</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/kaqIw352MSJ8xoi1xU09ZA" title="Object-like Macros" target="_blank">Object-like Macros</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/wcQZzunlgjepxExZFc2ORQ" title="Macro Arguments" target="_blank">Macro Arguments</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/S4zfCHzg82fUAxdt8_SaZQ" title="Pre Processor Directives in C" target="_blank">Pre Processor Directives in C</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/G33GiOIZofiIN4Tx9_acbQ" title="The C Preprocessor" target="_blank">The C Preprocessor</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/0OYhpL2cJfsIMBWhTuZsAA" title="Standard Predefined Macros" target="_blank">Standard Predefined Macros</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/oF2vgIZNePdU965jCEZLHA" title="include guard" target="_blank">include guard</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/ROl5xAMKX-JpenEqmf7FnQ" title="Common Predefined Macros" target="_blank">Common Predefined Macros</a> </li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/ipbpW8pLm91jdr3YD-AENg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What are macros and how to use them</li>
+<li>What are the most common predefined macros</li>
+<li>How to include guard your header files</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project is mandatory</li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/alx-tools/Betty/blob/master/betty-style.pl" title="betty-style.pl" target="_blank">betty-style.pl</a> and <a href="https://github.com/alx-tools/Betty/blob/master/betty-doc.pl" title="betty-doc.pl" target="_blank">betty-doc.pl</a></li>
+<li>You are not allowed to use global variables</li>
+<li>No more than 5 functions per file</li>
+<li>The only C standard library functions allowed are <code>malloc</code>, <code>free</code> and <code>exit</code>. Any use of functions like <code>printf</code>, <code>puts</code>, <code>calloc</code>, <code>realloc</code> etc… is forbidden</li>
+<li>You are allowed to use <a href="https://github.com/alx-tools/_putchar.c/blob/master/_putchar.c" title="_putchar" target="_blank">_putchar</a></li>
+<li>You don’t have to push <code>_putchar.c</code>, we will use our file. If you do it won’t be taken into account</li>
+<li>In the following examples, the <code>main.c</code> files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one shown in the examples</li>
+<li>Don’t forget to push your header file</li>
+<li>All your header files should be include guarded</li>
+</ul>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Show quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: none;">
+          <div class="quiz_question_item_container" data-role="quiz_question493" data-position="2">
+            <div class=" clearfix" id="quiz_question-493">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The preprocessor generates assembly code</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="493">
+                <li class="">
+
+  <input type="radio" name="493" id="493-1508128464854" value="1508128464854" data-quiz-answer-id="1508128464854" data-quiz-question-id="493" disabled="disabled" checked="checked">
+  <label for="493-1508128464854"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="493" id="493-1508128460630" value="1508128460630" data-quiz-answer-id="1508128460630" data-quiz-question-id="493" disabled="disabled">
+  <label for="493-1508128460630"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question496" data-position="5">
+            <div class=" clearfix" id="quiz_question-496">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>This portion of code is actually using the library stdlib.</p>
+
+<pre><code>#include &lt;stdlib.h&gt;
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="496">
+                <li class="">
+
+  <input type="radio" name="496" id="496-1508128676270" value="1508128676270" data-quiz-answer-id="1508128676270" data-quiz-question-id="496" disabled="disabled" checked="checked">
+  <label for="496-1508128676270"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="496" id="496-1508128673527" value="1508128673527" data-quiz-answer-id="1508128673527" data-quiz-question-id="496" disabled="disabled">
+  <label for="496-1508128673527"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question497" data-position="6">
+            <div class=" clearfix" id="quiz_question-497">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The preprocessor removes all comments</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="497">
+                <li class="">
+
+  <input type="radio" name="497" id="497-1508128734511" value="1508128734511" data-quiz-answer-id="1508128734511" data-quiz-question-id="497" disabled="disabled">
+  <label for="497-1508128734511"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="497" id="497-1508128730238" value="1508128730238" data-quiz-answer-id="1508128730238" data-quiz-question-id="497" disabled="disabled" checked="checked">
+  <label for="497-1508128730238"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question505" data-position="14">
+            <div class=" clearfix" id="quiz_question-505">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The macro <code>__FILE__</code> expands to the name of the current input file, in the form of a C string constant.</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="505">
+                <li class="">
+
+  <input type="radio" name="505" id="505-1508130178577" value="1508130178577" data-quiz-answer-id="1508130178577" data-quiz-question-id="505" disabled="disabled">
+  <label for="505-1508130178577"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="505" id="505-1508130174050" value="1508130174050" data-quiz-answer-id="1508130174050" data-quiz-question-id="505" disabled="disabled" checked="checked">
+  <label for="505-1508130174050"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question504" data-position="13">
+            <div class=" clearfix" id="quiz_question-504">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Why should we use include guards in our header files?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="504">
+                <li class="">
+
+  <input type="radio" name="504" id="504-1508130056514" value="1508130056514" data-quiz-answer-id="1508130056514" data-quiz-question-id="504" disabled="disabled" checked="checked">
+  <label for="504-1508130056514"><p>To avoid the problem of double inclusion when dealing with the include directive.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="504" id="504-1508130019194" value="1508130019194" data-quiz-answer-id="1508130019194" data-quiz-question-id="504" disabled="disabled">
+  <label for="504-1508130019194"><p>Because we said so, and we should never ask why.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question501" data-position="10">
+            <div class=" clearfix" id="quiz_question-501">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>This code will try to allocate 1024 bytes in the heap:</p>
+
+<pre><code>#define BUFFER_SIZE 1024
+malloc(BUFFER_SIZE)
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="501">
+                <li class="">
+
+  <input type="radio" name="501" id="501-1508129451992" value="1508129451992" data-quiz-answer-id="1508129451992" data-quiz-question-id="501" disabled="disabled">
+  <label for="501-1508129451992"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="501" id="501-1508129449078" value="1508129449078" data-quiz-answer-id="1508129449078" data-quiz-question-id="501" disabled="disabled" checked="checked">
+  <label for="501-1508129449078"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question500" data-position="9">
+            <div class=" clearfix" id="quiz_question-500">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What will be the last 5 lines of the output of the command <code>gcc -E</code> on this code?</p>
+
+<pre><code>#include &lt;stdlib.h&gt;
+
+int main(void)
+{
+    NULL;
+    return (EXIT_SUCCESS);
+}
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="500">
+                <li class="">
+
+  <input type="radio" name="500" id="500-1508129316671" value="1508129316671" data-quiz-answer-id="1508129316671" data-quiz-question-id="500" disabled="disabled">
+  <label for="500-1508129316671"><pre><code>int main(void)
+{
+ '\0';
+ return (0);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="500" id="500-1508129245032" value="1508129245032" data-quiz-answer-id="1508129245032" data-quiz-question-id="500" disabled="disabled">
+  <label for="500-1508129245032"><pre><code>int main(void)
+{
+ 0;
+ return (0);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="500" id="500-1508129274994" value="1508129274994" data-quiz-answer-id="1508129274994" data-quiz-question-id="500" disabled="disabled">
+  <label for="500-1508129274994"><pre><code>int main()
+{
+ 0;
+ return (0);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="500" id="500-1508129309792" value="1508129309792" data-quiz-answer-id="1508129309792" data-quiz-question-id="500" disabled="disabled" checked="checked">
+  <label for="500-1508129309792"><pre><code>int main(void)
+{
+ ((void *)0);
+ return (0);
+}
+</code></pre>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question506" data-position="15">
+            <div class=" clearfix" id="quiz_question-506">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What will be the output of this program? (on a standard 64 bits, Linux machine)</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define int char
+
+int main(void)
+{
+    int i;
+
+    i = 5;
+    printf ("sizeof(i) = %lu", sizeof(i));
+    return (EXIT_SUCCESS);
+}
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="506">
+                <li class="">
+
+  <input type="radio" name="506" id="506-1508130226938" value="1508130226938" data-quiz-answer-id="1508130226938" data-quiz-question-id="506" disabled="disabled">
+  <label for="506-1508130226938"><p>Segmentation Fault</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="506" id="506-1508130327730" value="1508130327730" data-quiz-answer-id="1508130327730" data-quiz-question-id="506" disabled="disabled">
+  <label for="506-1508130327730"><p>sizeof(i) = 5</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="506" id="506-1508130312433" value="1508130312433" data-quiz-answer-id="1508130312433" data-quiz-question-id="506" disabled="disabled">
+  <label for="506-1508130312433"><p>It does not compile</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="506" id="506-1508130330856" value="1508130330856" data-quiz-answer-id="1508130330856" data-quiz-question-id="506" disabled="disabled">
+  <label for="506-1508130330856"><p>sizeof(i) = 4</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="506" id="506-1508130539733" value="1508130539733" data-quiz-answer-id="1508130539733" data-quiz-question-id="506" disabled="disabled" checked="checked">
+  <label for="506-1508130539733"><p>sizeof(i) = 1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="506" id="506-1508130318147" value="1508130318147" data-quiz-answer-id="1508130318147" data-quiz-question-id="506" disabled="disabled">
+  <label for="506-1508130318147"><p>sizeof(i) = 8</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question503" data-position="12">
+            <div class=" clearfix" id="quiz_question-503">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>This is the correct way to define the macro <code>SUB</code>:</p>
+
+<pre><code>#define SUB(a, b) a - b
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="503">
+                <li class="">
+
+  <input type="radio" name="503" id="503-1508129872961" value="1508129872961" data-quiz-answer-id="1508129872961" data-quiz-question-id="503" disabled="disabled" checked="checked">
+  <label for="503-1508129872961"><p>No, it should be written this way:</p>
+
+<pre><code>#define SUB(a, b) ((a) - (b))
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="503" id="503-1508129788858" value="1508129788858" data-quiz-answer-id="1508129788858" data-quiz-question-id="503" disabled="disabled">
+  <label for="503-1508129788858"><p>Yes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="503" id="503-1508129793088" value="1508129793088" data-quiz-answer-id="1508129793088" data-quiz-question-id="503" disabled="disabled">
+  <label for="503-1508129793088"><p>No, it should be written this way:</p>
+
+<pre><code>#define SUB(a, b) (a - b)
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="503" id="503-1508129861297" value="1508129861297" data-quiz-answer-id="1508129861297" data-quiz-question-id="503" disabled="disabled">
+  <label for="503-1508129861297"><p>No, it should be written this way:</p>
+
+<pre><code>#define SUB(a, b) (a) - (b)
+</code></pre>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question502" data-position="11">
+            <div class=" clearfix" id="quiz_question-502">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What does the macro <code>TABLESIZE</code> expand to?</p>
+
+<pre><code>#define BUFSIZE 1020
+#define TABLESIZE BUFSIZE
+#undef BUFSIZE
+#define BUFSIZE 37
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="502">
+                <li class="">
+
+  <input type="radio" name="502" id="502-1508129515536" value="1508129515536" data-quiz-answer-id="1508129515536" data-quiz-question-id="502" disabled="disabled">
+  <label for="502-1508129515536"><p>1020</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="502" id="502-1508129520464" value="1508129520464" data-quiz-answer-id="1508129520464" data-quiz-question-id="502" disabled="disabled" checked="checked">
+  <label for="502-1508129520464"><p>37</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="502" id="502-1508129525328" value="1508129525328" data-quiz-answer-id="1508129525328" data-quiz-question-id="502" disabled="disabled">
+  <label for="502-1508129525328"><p>nothing</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question498" data-position="7">
+            <div class=" clearfix" id="quiz_question-498">
+
+    <h4 class="quiz_question">
+        
+        Question #10
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the <code>gcc</code> option that runs only the preprocessor?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="498">
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128924350" value="1508128924350" data-quiz-answer-id="1508128924350" data-quiz-question-id="498" disabled="disabled">
+  <label for="498-1508128924350"><p>-a</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128938727" value="1508128938727" data-quiz-answer-id="1508128938727" data-quiz-question-id="498" disabled="disabled">
+  <label for="498-1508128938727"><p>-pedantic</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128931055" value="1508128931055" data-quiz-answer-id="1508128931055" data-quiz-question-id="498" disabled="disabled">
+  <label for="498-1508128931055"><p>-P</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128950206" value="1508128950206" data-quiz-answer-id="1508128950206" data-quiz-question-id="498" disabled="disabled" checked="checked">
+  <label for="498-1508128950206"><p>-E</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128961438" value="1508128961438" data-quiz-answer-id="1508128961438" data-quiz-question-id="498" disabled="disabled">
+  <label for="498-1508128961438"><p>-preprocessor</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128954254" value="1508128954254" data-quiz-answer-id="1508128954254" data-quiz-question-id="498" disabled="disabled">
+  <label for="498-1508128954254"><p>-cisfun</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="498" id="498-1508128935175" value="1508128935175" data-quiz-answer-id="1508128935175" data-quiz-question-id="498" disabled="disabled">
+  <label for="498-1508128935175"><p>-p</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question494" data-position="3">
+            <div class=" clearfix" id="quiz_question-494">
+
+    <h4 class="quiz_question">
+        
+        Question #11
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The preprocessor generates object code</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="494">
+                <li class="">
+
+  <input type="radio" name="494" id="494-1508128514711" value="1508128514711" data-quiz-answer-id="1508128514711" data-quiz-question-id="494" disabled="disabled" checked="checked">
+  <label for="494-1508128514711"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="494" id="494-1508128511647" value="1508128511647" data-quiz-answer-id="1508128511647" data-quiz-question-id="494" disabled="disabled">
+  <label for="494-1508128511647"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question495" data-position="4">
+            <div class=" clearfix" id="quiz_question-495">
+
+    <h4 class="quiz_question">
+        
+        Question #12
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The preprocessor links our code with libraries.</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="495">
+                <li class="">
+
+  <input type="radio" name="495" id="495-1508128586198" value="1508128586198" data-quiz-answer-id="1508128586198" data-quiz-question-id="495" disabled="disabled" checked="checked">
+  <label for="495-1508128586198"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="495" id="495-1508128582791" value="1508128582791" data-quiz-answer-id="1508128582791" data-quiz-question-id="495" disabled="disabled">
+  <label for="495-1508128582791"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question499" data-position="8">
+            <div class=" clearfix" id="quiz_question-499">
+
+    <h4 class="quiz_question">
+        
+        Question #13
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p><code>NULL</code> is a macro</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="499">
+                <li class="">
+
+  <input type="radio" name="499" id="499-1508129036190" value="1508129036190" data-quiz-answer-id="1508129036190" data-quiz-question-id="499" disabled="disabled">
+  <label for="499-1508129036190"><p>False</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="499" id="499-1508129032846" value="1508129032846" data-quiz-answer-id="1508129032846" data-quiz-question-id="499" disabled="disabled" checked="checked">
+  <label for="499-1508129032846"><p>True</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question492" data-position="1">
+            <div class=" clearfix" id="quiz_question-492">
+
+    <h4 class="quiz_question">
+        
+        Question #14
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What are the steps of compilation?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="492">
+                <li class="">
+
+  <input type="radio" name="492" id="492-1508128296687" value="1508128296687" data-quiz-answer-id="1508128296687" data-quiz-question-id="492" disabled="disabled">
+  <label for="492-1508128296687"><ol>
+<li>compiler 2. preprocessor 3. assembler 4. linker</li>
+</ol>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="492" id="492-1508128328086" value="1508128328086" data-quiz-answer-id="1508128328086" data-quiz-question-id="492" disabled="disabled" checked="checked">
+  <label for="492-1508128328086"><ol>
+<li>preprocessor 2.compiler 3. assembler 4. linker</li>
+</ol>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="492" id="492-1508128363902" value="1508128363902" data-quiz-answer-id="1508128363902" data-quiz-question-id="492" disabled="disabled">
+  <label for="492-1508128363902"><ol>
+<li>preprocessor 2.compiler 3. linker 4. assembler</li>
+</ol>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+      </section>
+    </div>
+  </div>
+
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task945" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-945">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Object-like Macro
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="945" data-correction-id="20659973">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Create a header file that defines a macro named <code>SIZE</code> as an abbreviation for the token <code>1024</code>.</p>
+
+<pre><code>julien@ubuntu:~/0x0c. macro, structures$ cat 0-main.c
+#include "0-object_like_macro.h"
+#include "0-object_like_macro.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int s;
+
+    s = 98 + SIZE;
+    printf("%d\n", s);
+    return (0);
+}
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c -o a
+julien@ubuntu:~/0x0c. macro, structures$ ./a 
+1122
+julien@ubuntu:~/0x0c. macro, structures$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-low_level_programming</code></li>
+            <li>Directory: <code>0x0D-preprocessor</code></li>
+            <li>File: <code>0-object_like_macro.h</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-945-modal-button" data-task-id="945" data-toggle="modal" data-target="#task-test-correction-945-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:945}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-945-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Object-like Macro"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="945">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="945">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="945">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:945}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="945" data-toggle="modal" data-target="#task-qa-review-945-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:945}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-945-modal" data-correction-id="20659973" data-task-id="945">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Object-like Macro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task946" data-position="2" id="task-num-1">
+      <div class="panel panel-default task-card " id="task-946">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      1. Pi
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="946" data-correction-id="20659973">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Create a header file that defines a macro named <code>PI</code> as an abbreviation for the token <code>3.14159265359</code>.</p>
+
+<pre><code>julien@ubuntu:~/0x0c. macro, structures$ cat 1-main.c
+#include "1-pi.h"
+#include "1-pi.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    float a;
+    float r;
+
+    r = 98;
+    a = PI * r * r;
+    printf("%.3f\n", a);
+    return (0);
+}
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c -o b
+julien@ubuntu:~/0x0c. macro, structures$ ./b
+30171.855
+julien@ubuntu:~/0x0c. macro, structures$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-low_level_programming</code></li>
+            <li>Directory: <code>0x0D-preprocessor</code></li>
+            <li>File: <code>1-pi.h</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-946-modal-button" data-task-id="946" data-toggle="modal" data-target="#task-test-correction-946-correction-modal" id="task-num-1-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:946}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-946-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "1. Pi"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="946">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="946">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="946">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:946}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="946" data-toggle="modal" data-target="#task-qa-review-946-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:946}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-946-modal" data-correction-id="20659973" data-task-id="946">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">1. Pi</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task947" data-position="3" id="task-num-2">
+      <div class="panel panel-default task-card " id="task-947">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. File name
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="947" data-correction-id="20659973">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a program that prints the name of the file it was compiled from, followed by a new line.</p>
+
+<ul>
+<li>You are allowed to use the standard library</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c -o c
+julien@ubuntu:~/0x0c. macro, structures$ ./c 
+2-main.c
+julien@ubuntu:~/0x0c. macro, structures$ cp 2-main.c 02-main.c
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 02-main.c -o cc
+julien@ubuntu:~/0x0c. macro, structures$ ./cc
+02-main.c
+julien@ubuntu:~/0x0c. macro, structures$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-low_level_programming</code></li>
+            <li>Directory: <code>0x0D-preprocessor</code></li>
+            <li>File: <code>2-main.c</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-947-modal-button" data-task-id="947" data-toggle="modal" data-target="#task-test-correction-947-correction-modal" id="task-num-2-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:947}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-947-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "2. File name"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="947">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="947">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="947">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:947}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="947" data-toggle="modal" data-target="#task-qa-review-947-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:947}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-947-modal" data-correction-id="20659973" data-task-id="947">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">2. File name</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task948" data-position="4" id="task-num-3">
+      <div class="panel panel-default task-card " id="task-948">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. Function-like macro
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="948" data-correction-id="20659973">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a function-like macro <code>ABS(x)</code> that computes the absolute value of a number <code>x</code>.</p>
+
+<pre><code>julien@ubuntu:~/0x0c. macro, structures$ cat 3-main.c
+#include &lt;stdio.h&gt;
+#include "3-function_like_macro.h"
+#include "3-function_like_macro.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int i;
+    int j;
+
+    i = ABS(-98) * 10;
+    j = ABS(98) * 10;
+    printf("%d, %d\n", i, j);
+    return (0);
+}
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c -o d
+julien@ubuntu:~/0x0c. macro, structures$ ./d 
+980, 980
+julien@ubuntu:~/0x0c. macro, structures$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-low_level_programming</code></li>
+            <li>Directory: <code>0x0D-preprocessor</code></li>
+            <li>File: <code>3-function_like_macro.h</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-948-modal-button" data-task-id="948" data-toggle="modal" data-target="#task-test-correction-948-correction-modal" id="task-num-3-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:948}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-948-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "3. Function-like macro"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="948">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="948">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="948">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:948}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="948" data-toggle="modal" data-target="#task-qa-review-948-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:948}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-948-modal" data-correction-id="20659973" data-task-id="948">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">3. Function-like macro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task949" data-position="5" id="task-num-4">
+      <div class="panel panel-default task-card " id="task-949">
+  <span id="user_id" data-id="341641"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      4. SUM
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="341641"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="949" data-correction-id="20659973">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a function-like macro <code>SUM(x, y)</code> that computes the sum of the numbers <code>x</code> and <code>y</code>.</p>
+
+<pre><code>julien@ubuntu:~/0x0c. macro, structures$ cat 4-main.c
+#include &lt;stdio.h&gt;
+#include "4-sum.h"
+#include "4-sum.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int s;
+
+    s = SUM(98, 1024);
+    printf("%d\n", s);
+    return (0);
+}
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c -o e
+julien@ubuntu:~/0x0c. macro, structures$ ./e 
+1122
+julien@ubuntu:~/0x0c. macro, structures$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+      <!-- LTI Resource -->
+
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-low_level_programming</code></li>
+            <li>Directory: <code>0x0D-preprocessor</code></li>
+            <li>File: <code>4-sum.h</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+      <button class="btn btn-default btn-sm check-your-task-949-modal-button" data-task-id="949" data-toggle="modal" data-target="#task-test-correction-949-correction-modal" id="task-num-4-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:949}">
+          Check submission
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-949-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "4. SUM"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="949">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="949">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="949">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:949}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="949" data-toggle="modal" data-target="#task-qa-review-949-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:949}">
+        View results
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-949-modal" data-correction-id="20659973" data-task-id="949">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">4. SUM</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+
+          <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended Sandbox</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;available&quot;:true,&quot;description&quot;:&quot;\u003cp\u003eBasic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations\u003c/p\u003e\n&quot;,&quot;id&quot;:39,&quot;name&quot;:&quot;Ubuntu 20.04&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:2,&quot;csrfToken&quot;:&quot;MZAbEr_2yvUmvo1GlZsDCXc5F7zNpJ2r0nGRg79Uu0ihxkeROnBCEOJ5cAYTnMr-y9esqNUZtG67GjVYXRPekg&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary"><i aria-hidden="true" class="fa-solid fa-filter"></i><span class="ml-2">Running only</span></a><div class="align-items-center d-flex" style="position: relative; width: 100%;"><input class="form-control" placeholder="Search for an image ..." type="search" value=""></div></div><div class="mt-3"><h3>1 image<small class="ml-2">(0/2 Sandboxes spawned)</small></h3></div><div class="mt-3"><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa-solid fa-terminal text-danger"></i><span class="ml-2">Ubuntu 20.04</span></h3><div class="mt-2 text-muted"><p>Basic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations</p>
+</div></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa-solid fa-play"></i><span class="ml-2">Run</span></a></div></div></div></div></div></div></div></div></div></div></div>
+
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+      </article>
+
+        <div class="copyright">Copyright © 2024 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary atop-help" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa-solid fa-magnifying-glass "></i>
+  <i aria-hidden="true" class="fa-solid fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" autocomplete="off" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+        <script id="cody-snippet">
+          window.codySettings = { widget_id: "9993bc72-2258-452b-a4bf-b2fe1ad5e0d7" };
+          !function(){var t=window,e=document,a=function(){var t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://trinketsofcody.com/cody-widget.js";var a=e.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)};"complete"===document.readyState?a():t.attachEvent?t.attachEvent("onload",a):t.addEventListener("load",a,!1)}();
+        </script>
+  
+
+</body></html>
